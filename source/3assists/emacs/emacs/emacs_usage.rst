@@ -1,0 +1,22 @@
+.. _emacs _usage:
+
+emacs使用
+######################
+::
+
+    C_h v load-path
+    (add-to-list 'load-path "/home/gordon/emacs")
+
+* emacs重新载入文件::
+
+   M-x revert-buffer(if you want you can bind it to a key)
+   or use a more practice trick: use C-x C-v RET
+
+
+* 把連续两个回车换成一个回车::
+
+    M-x replace-string RET C-Q C-J RET C-Q C-J C-Q C-J RET
+
+* 在每行的开头增加一字符串"bloogie"::
+
+    M-x replace-string RET C-Q C-J RET C-Q C-J bloogie SPACE RET

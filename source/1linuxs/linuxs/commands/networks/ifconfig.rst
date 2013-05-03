@@ -1,0 +1,23 @@
+.. _ifconfig:
+
+ifconfig命令使用
+======================
+
+
+ifconfig  配置网络接口::
+
+    -a 显示所有网络接口
+
+ifconfig <网卡> up|down  激 活|禁用网卡
+
+示例::
+
+      sudo ifconfig eth0 up
+
+给网卡指定 IP 地址或子网掩码::
+
+    ifconfig <网卡> add <IP 地址> [ netmask <子网掩码> ]
+
+::
+
+    sudo ifconfig eth0 192.168.10.123 netmask 255.255.255.0
