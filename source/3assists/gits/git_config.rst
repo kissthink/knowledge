@@ -13,6 +13,10 @@ git配置
 
     git config user.name
 
+* If the identity used for this commit is wrong, you can fix it with::
+
+    git commit --amend --author='Your Name <you@example.com>'
+
 * 你也可以自己编辑文件内容。git首先会检查'/etc/gitconfig'，然后是'~/.gitconfig'最后是'.git/config'，这些文件里的内容格式类似这样::
 
     [user]

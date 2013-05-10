@@ -8,6 +8,6 @@ centos专用命令
    :maxdepth: 2
 
    centos/chkconfig
-
+   centos/centos_office
 
 

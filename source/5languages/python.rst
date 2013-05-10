@@ -9,8 +9,11 @@ Python使用方法
    :maxdepth: 2
 
    pythons/python_install
-   pythons/python_tmp
+   pythons/python_simple
    pythons/python_example
+   pythons/python_tmp
+   pythons/python_date
+   pythons/python_uwsgi
 
 
 

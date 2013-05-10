@@ -30,6 +30,10 @@
            :width: 12.0cm
            :width: 20%
 
+    * 注释::
+
+        .. -*- coding:utf-8 -*-
+
     * 代码格式
 
         ``usage.rst``

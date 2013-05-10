@@ -13,6 +13,7 @@
    :maxdepth: 1
 
    4sqls/redis
+   4sqls/mongodb
    4sqls/mysql
    4sqls/sqlite
 
