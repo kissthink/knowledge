@@ -41,6 +41,7 @@ B1;2305;0c.. _tool:
 
    tools/samba
    tools/puttygen
+   tools/base64
 
 
 

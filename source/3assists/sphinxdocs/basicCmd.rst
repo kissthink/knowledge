@@ -1,7 +1,7 @@
 .. _commoncmd:
 
 基本格式查询
-=================
+#######################
 
 .. _header_1:
 
@@ -113,7 +113,9 @@
             php
             matlab
             sh
-            ruby            
+            ruby
+            bash
+            
 
 
         * emphasize-lines::
@@ -126,6 +128,13 @@
 
             latin-1
 
+隐藏树
+
+.. toctree::
+   :hidden:
+   :maxdepth: 2
+
+   simple_hiden
 
 
 配置文件选项类型

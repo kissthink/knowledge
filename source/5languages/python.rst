@@ -12,7 +12,10 @@ Python使用方法
    pythons/python_simple
    pythons/python_example
    pythons/python_tmp
-   pythons/python_date
+   pythons/python_buildin_function
+   pythons/python_buildin_type
+   pythons/python_basic
+   pythons/python_mongo
    pythons/python_uwsgi
 
 
