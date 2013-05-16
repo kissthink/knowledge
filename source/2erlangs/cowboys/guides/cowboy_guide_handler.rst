@@ -8,16 +8,21 @@ Handlers
 * Different kinds of handlers can be combined in a single module.
 
 
+子目录
+--------------
 
 .. toctree::
    :maxdepth: 2
 
-    handlers/cowboy_guide_handler_http
-    handlers/cowboy_guide_handler_loop
-    handlers/cowboy_guide_handler_websocket
-    handlers/cowboy_guide_handler_rest
-    handlers/cowboy_guide_handler_static
+   handlers/cowboy_guide_handler_http
+   handlers/cowboy_guide_handler_loop
+   handlers/cowboy_guide_handler_websocket
+   handlers/cowboy_guide_handler_rest
+   handlers/cowboy_guide_handler_static
 
+
+说明
+----------
 
 * All of them have a common entry point: the init/3 function
 * By default, Cowboy considers your handler to be an HTTP handler.

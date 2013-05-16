@@ -11,4 +11,5 @@ MongoDB的使用
    mongodbs/mongodb_install
    mongodbs/mongodb_usage
    mongodbs/mongodb_simple
+   mongodbs/mongodb_view
 
