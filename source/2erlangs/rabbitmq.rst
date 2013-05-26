@@ -1,7 +1,8 @@
 .. _rabbitmq:
 
-rabbitmq的使用
+Rabbitmq的使用
 ######################
+
 :作者: 新溪-gordon
 :时间: 2013-04-25
 

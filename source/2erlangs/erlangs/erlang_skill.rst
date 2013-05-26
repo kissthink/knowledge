@@ -1,6 +1,6 @@
 .. _erlang_skill:
 
-erlang技巧
+Erlang技巧
 #################
 ::
 

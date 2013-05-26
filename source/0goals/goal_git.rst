@@ -9,9 +9,9 @@
 * 5myproject 在nutstore中(我整理的小项目集合)
 
 * gitworkdoc 在nutstrore中, 之前在公司整理的文档集合
-* myconfigs/emacs.git 在nutstore中, 存放emacs的配置文件
 
 
+* myconfigs/emacs.git 在nutstore中, 存放emacs的配置文件(删除)
 * 0personal.git 在nutstore中(删除)
 * 1myconfig.git 在nutstore中(删除)
 * 3gitdoc.git 在nutstore中(删除)
@@ -20,6 +20,7 @@
 
 在github中
 ----------------
+* git@github.com:wei64/.dotfiles.git   (我的各种配置文件)
 
 
 在我的服务器中

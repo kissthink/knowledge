@@ -14,7 +14,13 @@ tar -c|x|u|r|t[z|j][v] -f <归档文件> [未打包文件]
     -v表示交互，即命令更具交互性
     -z表示使用gzip滤波器
     -X表示含在指定文件名列表中的文件会被排除在备份之外
+    -t, --list: list the contents of an archive
+    -f, --file=ARCHIVE:use archive file or device ARCHIVE
 
+
+* 查看压缩文件内容::
+
+    tar --list --verbose --file=<tarname.tar.gz> | less
 
 * 把解压后的文件释放到指定目录::
 

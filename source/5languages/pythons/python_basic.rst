@@ -10,3 +10,12 @@
 
    basics/python_date
    basics/python_string
+   basics/python_list
+
+::
+
+    int(x)    # convert to Integers
+    str(x)    # convert to Strings
+    list(x)   # convert to List
+    
+

@@ -1,7 +1,8 @@
 .. _sqlite:
 
-sqlite使用文档
+SQLite使用文档
 ###################
+
 :作者: 新溪-gordon <programfan.info(#)gmail.com>
 :时间: 2013-01-30
 

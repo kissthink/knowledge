@@ -78,10 +78,16 @@ JS相关
 
 * Log4j:Apache的一个开放源代码项目，通过使用Log4j，我们可以控制日志信息输送的目的地是控制台、文件、GUI组件、甚至是套接口
 
+* `Twisted <http://twistedmatrix.com/>`_ is an event-driven networking engine written in Python and licensed under the open source
+
 简介
 =========
 
-* tmux: 来自OpenBSD的优秀终端复用软件，类似GNU Screen
+* `tmux <http://tmux.sourceforge.net/>`_: 来自OpenBSD的优秀终端复用软件，类似GNU Screen, 
 * cassandra: 一个分散的结构化存储系统
+* 什麼是 dotfile 呢？dotfile 就是你的那些 dot 開頭的檔案，譬如說 .vim .vimrc .emacs.d .bashrc
+* `Winpdb <http://winpdb.org>`_ - A platform independent Python debugger
+* xterm 是一个X Window System上的标准虚拟终端。用户可以在同一个显示器上开启许多xterm，每一个都为其中运行的进程提供独立的输入输出(一般来说此进程是Unix shell)
+
 
 

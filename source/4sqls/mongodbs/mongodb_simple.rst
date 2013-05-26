@@ -28,8 +28,25 @@ MongoDB簡单用法
 
 格式::
 
-    db.<tableName>.find()               # 查出所有数据
-    db.<tableName>.findOne()            # 查处一条数据
+    # 查出所有数据
+    db.<tableName>.find()
+    # 根据查询条件查询
+    db.<tableName>.find({"key" : <value>})
+    # 根据多个查询条件查询
+    db.<tableName>.find({"key1" : <value1>, "key2" : <value2>})
+
+    # 查询此表的数据条数
+    db.<tableName>.count()
+    # 查询此表按条件的数据条数
+    db.<tableName>.find({<key>, <value>}).count()
+
+    # 查询出限定条数的数据
+    db.<tableName>.find({<key>, <value>}).limit(<count>)
+
+    # 查出一条数据
+    db.<tableName>.findOne()
+    # 查出满足条件的一条数据
+    db.<tableName>.findOne({<key>, <value>})
 
 数据删除
 ---------------

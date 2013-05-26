@@ -70,6 +70,8 @@ from: http://woodpecker.org.cn/abyteofpython_cn/chinese/
 
 第7章 python函数
 --------------------
+* 如果一个Python函数、类方法或属性的名字以两个下划线开始(但不是结束), 它是私有的
+* 类方法或者是私有 (只能在它们自已的类中使用) 或者是公有 (任何地方都可使用)
 
 ::
 
@@ -148,8 +150,8 @@ dir函数::
     dir(sys)    # get list of attributes for sys module
 
 
-第9章 数据结构
---------------------
+第9章 数据结构(list, tuple, dict...)
+-----------------------------------------
 列表::
 
     shoplist = ['apple', 'mango', 'carrot', 'banana']   #列表

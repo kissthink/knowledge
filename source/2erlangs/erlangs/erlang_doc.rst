@@ -10,3 +10,8 @@ Erlang文档
 
    docs/erl_httpc
    docs/erl_ets
+   docs/erl_string
+   docs/erl_lists
+   docs/erl_supervisor
+
+
