@@ -45,10 +45,36 @@ curl命令简析
 
    静默模式！不显示进度条和错误显示！
 
+.. option:: -o/--output <file>
+
+   把输入改为写入到指定文件(默认是 ``stdout`` )::
+
+       curl http://{one,two}.site.com -o "file_#1.txt"
+       curl http://{site,host}.host[1-5].com -o "#1_#2"
+
+.. option:: -O/--remote-name
+
+   Write output to a local file named like the remote file we get. (Only the file part of the remote file is used, the path is cut off.)::
+
+       curl -O http://<url>/<file>.tar.gz  (类型wget?)
+
+.. option:: -L/--location
+
+   (HTTP/HTTPS) If the server reports that the requested page has moved to a different location (indicated with a Location: header and a 3XX  response  code),  this  option will make curl redo the request on the new place.(php等动态语言的文件需要加L才能下载下来)
+
+
+.. warning::
+
+   为啥有的时候要对url地址加入到双引号中?
+
+
+
+
+
 .. _curl_example:
 
 curl命令实例
--------------
+--------------------
 
 要全部显示，请加参数 -i，要只显示头部，用参数 -I。任何时候，可以使用 -v 命令看curl是怎样工作的，它向服务器发送的所有命令都会显示出来。为了断点续传，可以使用-r参数来指定传输范围。
 

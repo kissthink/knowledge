@@ -13,6 +13,7 @@ Contents:
 
    javascripts/document
    javascripts/jquery
+   javascripts/js_basic
    javascripts/jstopic
 
 

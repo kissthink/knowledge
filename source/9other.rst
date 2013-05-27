@@ -17,6 +17,7 @@
    9others/technology
    9others/regexp
    9others/http
+   9others/other_encoding
    9others/tmp
    9others/window
    9others/framework

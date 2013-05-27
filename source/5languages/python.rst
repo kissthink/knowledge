@@ -15,6 +15,7 @@ Python使用方法
    pythons/python_buildin_function
    pythons/python_buildin_type
    pythons/python_basic
+   pythons/python_lib
    pythons/python_mongo
    pythons/python_uwsgi
 
