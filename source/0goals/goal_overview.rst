@@ -80,6 +80,12 @@ JS相关
 
 * `Twisted <http://twistedmatrix.com/>`_ is an event-driven networking engine written in Python and licensed under the open source
 
+* scrapy——写的爬虫系统   pythongit://github.com/scrapy/scrapy.git
+* `valgrind——An instrumention framework for building dynamic analysis tools <http://valgrind.org/>`_
+
+
+
+
 简介
 =========
 
@@ -88,6 +94,6 @@ JS相关
 * 什麼是 dotfile 呢？dotfile 就是你的那些 dot 開頭的檔案，譬如說 .vim .vimrc .emacs.d .bashrc
 * `Winpdb <http://winpdb.org>`_ - A platform independent Python debugger
 * xterm 是一个X Window System上的标准虚拟终端。用户可以在同一个显示器上开启许多xterm，每一个都为其中运行的进程提供独立的输入输出(一般来说此进程是Unix shell)
-
+* CFLAGS and CXXFLAGS are the name of environment viriables or of Makefile virables that can be set to specify switches to be passed to a compiler in the process of building compute software.
 
 

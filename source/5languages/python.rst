@@ -9,6 +9,7 @@ Python使用方法
    :maxdepth: 2
 
    pythons/python_install
+   pythons/python_tool
    pythons/python_simple
    pythons/python_example
    pythons/python_tmp
@@ -18,6 +19,8 @@ Python使用方法
    pythons/python_lib
    pythons/python_mongo
    pythons/python_uwsgi
+   pythons/python_scrapy
+
 
 
 

@@ -74,13 +74,13 @@ MongoDB簡单用法
 
 "$set"修改器::
 
-    # 添加书——"Learning Python and Mongo"
+    # 添加一本书——"Learning Python and Mongo"
     db.users.update({"_id" : ObjectId("4217490312794ifdj344")}, 
         {"$set" : {"book" : "Learning Python and Mongo"} })
-    # 修改书——"Effective Python Programming"
+    # 修改书名——"Effective Python Programming"
     db.users.update({"_id" : ObjectId("4217490312794ifdj344")},
         {"$set" : {"book" : "Learning Python and Mongo"} })
-    # 删除书
+    # 删除书的信息
     db.users.update({"_id" : ObjectId("4217490312794ifdj344")},
         {"$unset" : {"book" : 1}}
 
@@ -93,18 +93,46 @@ MongoDB簡单用法
     # 得分增加100
     db.games.update({"game" : "pinball", "user" : "gordon"}, {"$inc" : {"score" : 100}})
 
-数组修改器1($push)::
+数组修改器1( ``$push`` 的使用)::
 
-    # 初始数据($push的使用)
+    # 初始数据
     db.games.insert({"game" : "pinball"})
-    # 增加此游戏使用用户gordon
+    # 增加一个属性user, 值是一个数组里面有一个值:gordon
     db.games.update(({"game" : "pinball"}, {"$push" : {"users" : "gordon"}})
-    # 增加此游戏使用用户leo
+    # 往users字段中再增加一个用户leo
     db.games.update(({"game" : "pinball"}, {"$push" : {"users" : "leo"}})
+
+数组修改器2( ``$pop`` 的使用)::
+
+    # 从数组末尾删除一个元素
+    db.game.update({"game" : "pinball"}, {"$pop" : {"users" : 1}})
+    # 从数组开头删除一个元素
+    db.game.update({"game" : "pinball"}, {"$pop" : {"users" : -1}})
+
+数据修改器3( ``$pull`` 的使用)::
+
+    # 把user中值为"gordon"的从列表中删除
+    db.game.update({"game" : "pinball"}, {"$pull" : {"user" : "gordon"} } )
+
+往数组增加数据时使用 ``$addToSet`` 可以避免重复::
+
+    db.games.update({}, {"$addToSet" : {"user" : "gordon"}})   # 这条数据因为数据表里有数据而执行无效
+
+
+
+组合使用
+------------------
+
+使用 ``$addToSet`` 和 ``$each`` 组合起来,可以添加多个不同的值::
+
+    db.games.update(
+       {"game" : "pinball"},     # 限定条件
+       {"$addToSet" : {"users" :
+          {"$each" : ["gordon", "joe", "andor"]}   # 要新增的列表
+       } }
+    )
 
 其他::
 
     $ne
-    $addToSet
-    $each
-    $pull——会将所有匹配的部分删掉
+
