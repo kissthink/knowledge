@@ -8,3 +8,13 @@ python安装
 
 
 
+::
+
+    easy_install web.py
+
+    easy_install pymongo
+
+    easy_install mysql-python
+
+
+    sudo easy_install -U distribute  # 不知道干什么用的,但我在安装mysql-python时,让我先安装这个才行
