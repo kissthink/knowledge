@@ -8,7 +8,7 @@ MongoDB簡单用法
     mongo            # 启动客户端
     use <dbName>     #使用<dbName>数据库
     db               #查看当前所在数据库
-
+    show collections   # 查看数据库列表
 
 数据插入
 ------------
@@ -26,7 +26,7 @@ MongoDB簡单用法
 数据查询
 ------------
 
-格式::
+基本格式::
 
     # 查出所有数据
     db.<tableName>.find()
@@ -35,18 +35,52 @@ MongoDB簡单用法
     # 根据多个查询条件查询
     db.<tableName>.find({"key1" : <value1>, "key2" : <value2>})
 
-    # 查询此表的数据条数
-    db.<tableName>.count()
-    # 查询此表按条件的数据条数
-    db.<tableName>.find({<key>, <value>}).count()
-
-    # 查询出限定条数的数据
-    db.<tableName>.find({<key>, <value>}).limit(<count>)
 
     # 查出一条数据
     db.<tableName>.findOne()
     # 查出满足条件的一条数据
     db.<tableName>.findOne({<key>, <value>})
+
+指定返回的键::
+
+    # 只取出表中字段为<key1>和<key2>的值
+    db.<tableName>.find({}, {<key1> : 1, <key2> : 1})
+    # 取出除字段<key>之外的表的数据
+    db.<tableName>.find({}, {<key> : 0})
+
+查询条件( ``$lt``, ``$lte``, ``$gt``, ``$gte`` 的使用 )::
+
+    db.<tableName>.find({<key> : {"$gte" : <value1>, "$lte" : <value2>} } )
+
+``$or``, ``$in`` 进行OR查询::
+
+    # $in
+    db.<tableName>.find({<key> : {"$in" : [<value1>, <value2>]}})
+    # $or
+    db.<tableName>.find({"$or" : [{<key1>:<value1>}, {<key2>:<value2>}]})
+
+``$not`` 是元条件句, 即可以用在任何其他条件之上
+
+查询表数据条数::
+
+    # 查询此表的数据条数
+    db.<tableName>.count()
+    # 查询此表按条件的数据条数
+    db.<tableName>.find({<key> : <value>}).count()
+
+limit, skip, sort::
+
+    # 查询出限定条数的数据
+    db.<tableName>.find({<key> : <value>}).limit(<count>)
+
+    # 排序
+    db.<tableName>.find().sort(<key>, -1)    # 降序
+    db.<tableName>.find().sort(<key>, 1)     # 升序
+
+    # 忽略前<count>个匹配的文档,如果匹配的小于<count>则不返回任何文档
+    db.<tableName>.find().skip(<count>)
+
+
 
 数据删除
 ---------------

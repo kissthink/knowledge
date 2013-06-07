@@ -9,6 +9,8 @@ jquery文档
    jquerys/jquery_browser_compatible
    jquerys/jquery_type
 
+   jquerys/jquery_artDialog
+
 
 
 

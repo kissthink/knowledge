@@ -44,3 +44,19 @@ Dynamic apps::
 
     ./uwsgi -s /tmp/uwsgi.sock -C -M -A 4 -m
     
+
+遇到问题(未确认)
+----------------------
+
+recv() failed (104: Connection reset by peer) while reading response header from upstream
+
+解决办法，在uwsgi中添加参数``--buffer-size 32768``
+
+
+
+upstream prematurely closed connection while reading response header from upstream
+解决办法，在uwsgi中添加参数``--limit-post 100000``
+
+
+
+

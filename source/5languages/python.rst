@@ -18,6 +18,7 @@ Python使用方法
    pythons/python_basic
    pythons/python_lib
    pythons/python_mongo
+   pythons/python_mysql
    pythons/python_uwsgi
    pythons/python_scrapy
 

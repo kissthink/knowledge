@@ -21,5 +21,6 @@
    5languages/lua
    5languages/lisp
    5languages/node
+   5languages/c
 
 

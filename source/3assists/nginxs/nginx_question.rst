@@ -73,3 +73,25 @@ upstream sent too big header while reading response header from upstream
     fastcgi_buffer_size 32k;
 
 
+
+
+
+
+client intended to send too large body: 12750515 bytes
+-------------------------------------------------------------------------
+需要在http段增加此说明::
+
+    client_max_body_size 2M;     # 限制http请求的body大小在2M以内, 一般用于限制附件的大小
+
+
+
+
+
+
+
+
+
+
+
+
+

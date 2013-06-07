@@ -5,6 +5,20 @@ python收集
 
 from: http://woodpecker.org.cn/abyteofpython_cn/chinese/
 
+import相关
+----------------------
+::
+
+    # 此模块import它上一层的模块
+    import sys
+    sys.path.append("..")
+
+一些 ``import`` 实例::
+
+    import pymongo
+    
+
+
 第4章 基本概念
 ---------------------
 

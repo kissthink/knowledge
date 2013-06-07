@@ -3,6 +3,9 @@
 pymongo的使用
 #######################
 
+http://api.mongodb.org/python/current/tutorial.html
+
+
 ::
 
     from pymongo import * # 导包

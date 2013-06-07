@@ -2,6 +2,10 @@
 
 centos操作系统yum命令
 ======================
+因为yum默认的是使用python2.4,为了使yum命令能正确执行,需要修改
+[root@CNC-BJ-5-3N1 bin]# vi yum
+将#!/usr/bin/python 改为 #!/usr/bin/python2.4
+
 
 .. _os_centos_install:
 
