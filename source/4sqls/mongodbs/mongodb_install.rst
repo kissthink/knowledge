@@ -3,6 +3,11 @@
 MongoDB的安装
 #######################
 
+::
+
+    sudo apt-get install mongodb   (unbunt下有问题,建议源码安装)
+
+
 
 
 `官方 <http://www.mongodb.org/>`_ 下载, 源码安装
