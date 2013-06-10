@@ -10,7 +10,8 @@ jquery文档
    jquerys/jquery_type
 
    jquerys/jquery_artDialog
-
+   jquerys/jquery_infinite-scroll
+   jquerys/jquery_masonry
 
 
 
