@@ -7,7 +7,6 @@
 --------------------------------------------
 
 获取cpu个数(unchecked)
-"""""""""""""""""""""""""""""
 ::
 
     nu1=`cat /proc/cpuinfo |grep processor|sed '$!d'|awk '{print $3}'`
@@ -18,14 +17,12 @@
     sed -i "s@worker_processes 4@worker_processes [url=mailtonginxprocesses@g]$nginxprocesses@g[/url]" /data/conf/nginx/nginx.conf
 
 获取内存大小(unchecked)
-"""""""""""""""""""""""""""
 ::
 
     Free=`free -m |grep Mem |awk '{print $2}'`
     echo cat /proc/meminfo   MemTotalFree MB >> /etc/motd
 
 获取磁盘信息(unchecked)
-""""""""""""""""""""""""""
 ::
 
     fdisk -l|grep "Disk"|awk '{print $1 " " $2 " " $3 " " $4}'|sed 's/,/ /g' >> /etc/motd
@@ -33,6 +30,22 @@
 
 
 
+
+在ubuntu下close laptop lid, 不执行任何操作
+----------------------------------------------------
+::
+
+    Alt + F2 and enter this: gconf-editor 
+    apps > gnome-power-manager > buttons
+    Set lid_ac and lid_battery to nothing
+
+    OR
+
+    1.When on AC Power, do nothing when laptop lid is closed: 
+    gconftool-2 -t string -s /apps/gnome-power-manager/buttons/lid_ac nothing 
+
+    2.When on Battery Power, do nothing when laptop lid is closed: 
+    gconftool-2 -t string -s /apps/gnome-power-manager/buttons/lid_battery nothing 
 
 
 

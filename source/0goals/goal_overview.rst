@@ -24,7 +24,7 @@ Linux相关
 
 Erlang相关
 =================
-
+* `thrift: <http://thrift.apache.org/>`_: a remote procedure call framework developped at Facebook for "scalable cross-languages services development".
 * distel: Distributed Emacs Lisp for Erlang.
 
 * plists: An Erlang module for doing list operations in parallel

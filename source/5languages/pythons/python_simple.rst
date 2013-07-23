@@ -334,6 +334,23 @@ __init__方法(在类的一个对象被建立时, 马上运行)::
         print line,
     f.close()
 
+file.seek(0)的使用::
+
+    file.seek(0)是重新定位在文件的第0位及开始位置 
+    file = open("test.txt","rw")  #注意这行的变动
+    file.seek(3)  #定位到第3个
+    for i in file:
+        print i
+    #现在到了最后一位了
+    for i in file:
+        print i
+    #不会显示任何结果
+
+    file.seek(0) #定位到第0个
+    for i in file:
+        print i
+
+
 储存器(Python提供一个标准的模块，称为pickle。使用它你可以在一个文件中储存任何Python对象，之后你又可以把它完整无缺地取出来。这被称为 持久地 储存对象)::
 
     # 储存与取储存

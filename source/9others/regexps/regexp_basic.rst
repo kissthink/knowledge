@@ -57,3 +57,26 @@
     [:space:] 任何会产生空白的字符 空格 tab CR
     重要的记住[:alnum:] [:alpha:] [:upper:] [:lower:] [:digit:]即可
 
+
+其他
+===========
+http://www.tutorialspoint.com/python/python_reg_expressions.htm
+
+
+::
+
+    (?:<xxxxx>)    不创建后向引用的group
+
+特殊字符::
+
+
+    \d             数字 [0-9]
+    \D             非数字 [^0-9]
+    \s             空白字符[ \t\r\n\f]
+    \S             非空白字符[^ \t\r\n\f]
+    \w             单词字符[A-Za-z0-9_]
+    \W             非单词字符[^A-Za-z0-9_]
+
+
+
+

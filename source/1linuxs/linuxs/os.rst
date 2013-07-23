@@ -16,3 +16,8 @@
    oses/linux
    oses/centos
    oses/ubuntu
+   oses/freebsd
+
+
+
+

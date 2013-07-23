@@ -13,13 +13,13 @@ Linux文档
    :maxdepth: 2
 
    linuxs/linux_file
-   linuxs/linux_tool
    linuxs/os
    linuxs/linux_command
    linuxs/special
    linuxs/linux_question
    linuxs/linux_skill
    linuxs/introduce
+   linuxs/linux_tool
 
 
 

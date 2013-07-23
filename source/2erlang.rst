@@ -12,16 +12,11 @@
    :maxdepth: 1
 
    2erlangs/erlang
-   2erlangs/ibrowse
    2erlangs/mnesia
-   2erlangs/rebar
    2erlangs/riak
-   2erlangs/tsung
    2erlangs/mochiweb
    2erlangs/nitrogen
    2erlangs/webmachine
-   2erlangs/cowboy
-   2erlangs/erlydtl
    2erlangs/rabbitmq
-
+   2erlangs/project
 

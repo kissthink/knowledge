@@ -8,7 +8,6 @@ python安装
 
 
 
-<<<<<<< HEAD
 
 安装高版本的python后，会遇到一些问题:
 
@@ -32,17 +31,11 @@ python安装
     python setup.py install
 
 
-
-
-=======
 ::
 
     easy_install web.py
-
+    easy_install redis
     easy_install pymongo
-
     easy_install mysql-python
-
-
     sudo easy_install -U distribute  # 不知道干什么用的,但我在安装mysql-python时,让我先安装这个才行
->>>>>>> 00cb187f5f85b304f3f83fcf2001a2c0a5bc695b
+
