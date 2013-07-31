@@ -12,7 +12,8 @@
 .. toctree::
    :maxdepth: 2
 
-   1linuxs/linux
-   1linuxs/shell
+   1systems/linux
+   1systems/mac
+   1systems/shell
 
 
