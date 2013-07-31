@@ -9,7 +9,7 @@ Yaf(Yet Another Framework)框架
 * 安装::
 
     $/path/to/phpize
-    $./configure --with-php-config=/path/to/php-config/
+    $./configure --with-php-config=/path/php/bin/php-config
     $make && make instal
 
 

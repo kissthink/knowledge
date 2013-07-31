@@ -13,9 +13,9 @@ Fatal error: Allowed memory size of 134217728 bytes exhausted
 
 
 
-php-fmp 内存不释放问题
-----------------------------------
-大量内存被php-cgi占用的原因:
+一个php-fmp进程占很大内存不释放问题
+------------------------------------------
+一块大内存被php-fpm占用的原因:
 
 * php-cgi不存在内存泄漏, 每个请求完成后php-cgi会回收内存, **但是不会释放给操作系统**
 * 官方解决办法:
@@ -29,15 +29,15 @@ php-fmp 内存不释放问题
 
 * 检查php进程的内存占用，杀掉内存使用超额的进程::
 
-    * * * * * /bin/bash /usr/local/script/kill_php_cgi.sh
+    * * * * * /bin/bash /usr/local/script/kill_php_fpm.sh
 
-* kill_php_cgi.sh脚本如下::
+* kill_php_fpm.sh脚本如下::
 
     #!/bin/sh
     # This script is used to kill php-cgi process that takes large memory size
     # If a php-cgi process uses 1% or more memory, then it will be killed.
 
-    PIDS=`ps aux|grep php-cgi|grep -v grep|awk '{if($4>=1)print $2}'`
+    PIDS=`ps aux|grep php-fpm|grep -v grep|awk '{if($4>=1)print $2}'`
 
     for PID in $PIDS
     do

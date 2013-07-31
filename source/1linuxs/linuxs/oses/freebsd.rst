@@ -1,6 +1,15 @@
 freebsd专用命令
 ##########################
 
+防火墙::
+
+    emacs /etc/pf.conf
+    /etc/rc.d/pf restart
+
+
+
+
+
 位置: ``/usr/ports``
 查询软件::
 
