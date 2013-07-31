@@ -14,7 +14,7 @@
    :maxdepth: 2
 
    0goal
-   1linux
+   1system
    2erlang
    3assist
    4sql
