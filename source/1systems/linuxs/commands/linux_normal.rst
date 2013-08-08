@@ -17,6 +17,7 @@
 
    normals/date
    normals/exec
+   normals/ssh
 
    normals/grep
    normals/sed
