@@ -105,3 +105,16 @@ PHP对应的包含文件fastcgi_params
     :language: nginx
     :emphasize-lines: 12,15-18
     :linenos:
+
+
+mobapi(ssl相关)
+------------------------------------
+
+.. literalinclude:: ./files/fastcgi_params
+    :language: nginx
+    :emphasize-lines: 12,15-18
+    :linenos:
+
+
+
+
