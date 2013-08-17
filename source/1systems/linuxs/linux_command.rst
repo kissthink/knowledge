@@ -20,6 +20,7 @@
    commands/linux_special
    commands/linux_centos
    commands/linux_debian
+   commands/linux_freebsd
    commands/linux_simple
    commands/linux_tmp
 
