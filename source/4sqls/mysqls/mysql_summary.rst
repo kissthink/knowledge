@@ -13,10 +13,17 @@ MySQL慢查询
     | Variable_name       | Value                        |
     +---------------------+------------------------------+
     | log_slow_queries    | ON                           |
-    | slow_launch_time    | 2                            |
+    | slow_launch_time    | 2  (这个不是慢查询时间)      |
     | slow_query_log      | ON                           |
     | slow_query_log_file | /var/mysql/log/slowquery.log |
     +---------------------+------------------------------+
+
+    mysql> show variables like 'long%';
+    +-----------------+----------+
+    | Variable_name   | Value    |
+    +-----------------+----------+
+    | long_query_time | 2.000000 |  // 这个才是慢查询时间
+    +-----------------+----------+
 
 查看现在的状态(系统显示有634个慢查询)::
 

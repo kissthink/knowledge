@@ -18,7 +18,6 @@ Linux文档
    linuxs/special
    linuxs/linux_question
    linuxs/linux_skill
-   linuxs/introduce
    linuxs/linux_tool
 
 

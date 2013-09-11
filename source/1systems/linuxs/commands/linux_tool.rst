@@ -12,7 +12,8 @@ B1;2305;0c.. _tool:
 .. toctree::
    :maxdepth: 3
 
-
+   tools/vagrant
+   tools/tmux
    tools/top
    tools/ps
    tools/pgrep

@@ -12,15 +12,16 @@
 .. toctree::
    :maxdepth: 1
 
-   5languages/android
    5languages/javascript
    5languages/php
-   5languages/java
-   5languages/perl
+   5languages/ruby
+   5languages/c
    5languages/python
    5languages/lua
    5languages/lisp
    5languages/node
-   5languages/c
+   5languages/android
+   5languages/java
+   5languages/perl
 
 

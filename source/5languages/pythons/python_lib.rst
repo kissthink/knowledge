@@ -10,6 +10,6 @@ Python常见的库函数
 
 
    libs/python_pycurl
-
+   libs/python_pyfile
 
 

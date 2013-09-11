@@ -14,9 +14,7 @@ Contents:
    :maxdepth: 2
 
    nginxs/nginx_install
-   nginxs/nginx_usage
    nginxs/nginx_usage2
-   nginxs/nginx_debug
    nginxs/nginx_config
    nginxs/nginx_example
    nginxs/nginx_src

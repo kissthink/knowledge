@@ -45,5 +45,14 @@ find命令使用
     find . -perm -220
     find . -perm -g+w,u+w
 
+    // 找出当前目录下普通文件列表
+    find . -type f
+
+    // 找出当前目录下更改时间在5日以前的文件并删除它们::
+    find . -type f -mtime +5 -exec rm {} \;
+
+    //使用正则
+    find . -name "[a-z]*"    //找出以a-z开头的文件
+
 
 

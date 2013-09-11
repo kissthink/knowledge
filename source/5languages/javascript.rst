@@ -15,5 +15,6 @@ Contents:
    javascripts/jquery
    javascripts/js_basic
    javascripts/jstopic
+   javascripts/css
 
 

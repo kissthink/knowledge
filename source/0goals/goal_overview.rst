@@ -88,12 +88,26 @@ JS相关
 
 简介
 =========
-
+* `vagrant <http://www.vagrantup.com>`_: 虚拟机
 * `tmux <http://tmux.sourceforge.net/>`_: 来自OpenBSD的优秀终端复用软件，类似GNU Screen, 
 * cassandra: 一个分散的结构化存储系统
 * 什麼是 dotfile 呢？dotfile 就是你的那些 dot 開頭的檔案，譬如說 .vim .vimrc .emacs.d .bashrc
 * `Winpdb <http://winpdb.org>`_ - A platform independent Python debugger
 * xterm 是一个X Window System上的标准虚拟终端。用户可以在同一个显示器上开启许多xterm，每一个都为其中运行的进程提供独立的输入输出(一般来说此进程是Unix shell)
 * CFLAGS and CXXFLAGS are the name of environment viriables or of Makefile virables that can be set to specify switches to be passed to a compiler in the process of building compute software.
+* SPDY 是 Google 开发的基于传输控制协议 (TCP) 的应用层协议 ，开发组正在推动 SPDY 成为正式标准（现为互联网草案）。SPDY 协议旨在通过压缩、多路复用和优先级来缩短网页的加载时间和提高安全性。（SPDY 是 Speedy 的昵音，意思是更快）
+* `netcraft <http://www.netcraft.com/>`_ 查看域名对应网站的操作系统、web服务器等资料
+* `ZooKeeper <http://zookeeper.apache.org>`_ 是Hadoop的正式子项目，它是一个针对大型分布式系统的可靠协调系统，提供的功能包括：配置维护、名字服务、分布式同步、组服务等。ZooKeeper的目标就是封装好复杂易出错的关键服务，将简单易用的接口和性能高效、功能稳定的系统提供给用户。
+* XA(X/Open), 必须首先了解分布式事务处理（Distributed Transaction Processing，DTP）的概念. 
+
+
+
+
+
+其他
+=============
+* 负载均衡: 硬件(F5 BIG-IP, Citrix Netscaler), 软件(LVS, Nginx, HA-Proxy), 高可用软件(Heartbeat, Keeplived), 成熟的Linux集群架构有(LVS+Keepalived, Nginx+Keepalived, DRBD+Heartbeat)
+
+
 
 

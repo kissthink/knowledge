@@ -11,7 +11,6 @@ Python使用方法
    pythons/python_install
    pythons/python_tool
    pythons/python_simple
-   pythons/python_example
    pythons/python_tmp
    pythons/python_buildin_function
    pythons/python_buildin_type

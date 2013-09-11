@@ -8,6 +8,26 @@ nginx完全使用说明
 
     ./configure --with-http_stub_status_module 
 
+nginx配置::
+
+         location /nginx_status {
+                stub_status on;
+                access_log off;
+                allow 127.0.0.1;
+                deny all;
+            }
+
+结果显示::
+
+    active connections – 当前 Nginx 正处理的活动连接数。
+    serveraccepts handled requests — 总共处理了 233851 个连接 , 成功创建 233851 次握手 (证明中间没有失败的 ), 总共处理了 687942 个请求 ( 平均每次握手处理了 2.94 个数据请求 )。
+    reading — nginx 读取到客户端的 Header 信息数。
+    writing — nginx 返回给客户端的 Header 信息数。
+    waiting — 开启 keep-alive 的情况下，这个值等于 active – (reading + writing)， 意思就是 Nginx 已经处理完正在等候下一次请求指令的驻留连接。
+
+
+
+
 常用的Nginx参数与控制
 ------------------------
 
@@ -187,3 +207,7 @@ NginxStatus 显示的内容意思如下:
            }
 
 
+Nginx调试
+-------------
+
+* 编译时使用选项 ``./configure --with-debug`` 

@@ -20,5 +20,6 @@ Shell文档
    shells/shell_array
    shells/shell_test
    shells/shell_tmp
+   shells/shell_example
 
 
