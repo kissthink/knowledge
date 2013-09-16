@@ -99,8 +99,8 @@ JS相关
 * `netcraft <http://www.netcraft.com/>`_ 查看域名对应网站的操作系统、web服务器等资料
 * `ZooKeeper <http://zookeeper.apache.org>`_ 是Hadoop的正式子项目，它是一个针对大型分布式系统的可靠协调系统，提供的功能包括：配置维护、名字服务、分布式同步、组服务等。ZooKeeper的目标就是封装好复杂易出错的关键服务，将简单易用的接口和性能高效、功能稳定的系统提供给用户。
 * XA(X/Open), 必须首先了解分布式事务处理（Distributed Transaction Processing，DTP）的概念. 
-
-
+* xfonts-wqy ( WenQuanYi Bitmap Song CJK font for X) 增加字体
+* `Laravel's templating system <http://laravel.com/docs/templates>`
 
 
 
