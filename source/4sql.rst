@@ -16,6 +16,8 @@
    4sqls/mongodb
    4sqls/mysql
    4sqls/sqlite
+   4sqls/oracle
+   4sqls/sqlserver
 
 
 
