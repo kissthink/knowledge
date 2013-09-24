@@ -8,5 +8,6 @@ ruby语言编程
    rubys/ruby_rubyist
    rubys/ruby_usage
    rubys/ruby_example
+   rubys/rockmonk
 
 

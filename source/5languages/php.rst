@@ -25,5 +25,5 @@ Contents:
    phps/php_smarty
    phps/php_phpmyadmin
    phps/php_discuz
-
+   phps/php_laravel
 

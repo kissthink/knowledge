@@ -4,4 +4,4 @@ oracle文档
 .. toctree::
    :maxdepth: 2
 
-    oracles/oracle_simple
+   oracles/oracle_simple

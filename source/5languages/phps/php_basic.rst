@@ -13,7 +13,7 @@ php基本介绍
    basic/php_basic_exception
    basic/php_basic_predefined_constant
    basic/php_basic_reserved_variable
-
+   basic/php_other
 
 
 
