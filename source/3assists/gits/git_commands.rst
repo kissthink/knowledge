@@ -15,6 +15,6 @@ Git命令列表
    commands/git_bisect
 
    commands/git_format_type
-
+   commands/git_submodule
 
 
