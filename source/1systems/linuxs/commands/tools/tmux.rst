@@ -67,7 +67,7 @@ tmux配置
     set -g pane-base-index 1    //panel的索引,默认从1开始
 
 
-.. notice::
+.. warning::
 
     修改tmux.conf文件后不会立即生效, 你需要关闭所有tmux窗口或键入 ``PREFIX :`` 并输入 ``source-file ~/.tmux.conf``
 

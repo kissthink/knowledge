@@ -101,7 +101,7 @@ JS相关
 * XA(X/Open), 必须首先了解分布式事务处理（Distributed Transaction Processing，DTP）的概念. 
 * xfonts-wqy ( WenQuanYi Bitmap Song CJK font for X) 增加字体
 * `Laravel's templating system <http://laravel.com/docs/templates>`
-
+* crawler
 
 
 其他
