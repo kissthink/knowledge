@@ -8,9 +8,10 @@ Laravel——php框架
 * 具体还要执行::
 
     cp server.php index.php
+    chmod -R 777 app/storage/meta
     chmod -R 777 app/storage/sessions
     chmod -R 777 app/storage/logs
-    chmod -R 777 app/storage/catche
+    chmod -R 777 app/storage/cache
 
 
 

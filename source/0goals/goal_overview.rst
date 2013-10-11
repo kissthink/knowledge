@@ -54,6 +54,8 @@ JS相关
 * mustache -- Logic-less templates
 * zeptojs -- Zepto is a minimalist JavaScript library for modern browsers with a largely jQuery-compatible API.(直接将ie拒之外)
 
+* `Bower <http://bower.io/>`_ -- A package manager for the web
+* `bootstrap <http://getbootstrap.com/>`_ 
 * backbone
 
     * git://github.com/addyosmani/backbone-fundamentals.git
