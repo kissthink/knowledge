@@ -12,4 +12,5 @@ Contents:
 
    androids/android_requirement.rst
    androids/android_install.rst
+   androids/android_tpl.rst
 
