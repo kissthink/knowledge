@@ -13,5 +13,6 @@ jquery文档
    jquerys/jquery_infinite-scroll
    jquerys/jquery_masonry
 
+   jquerys/jquery_qrcode
 
 

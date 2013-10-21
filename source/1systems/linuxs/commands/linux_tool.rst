@@ -14,15 +14,9 @@ B1;2305;0c.. _tool:
 
    tools/vagrant
    tools/tmux
-   tools/top
-   tools/ps
    tools/pgrep
    tools/pkill
 
-
-   tools/vmstat
-   tools/iostat
-   tools/dstat
    tools/tcpdump
 
    tools/curl

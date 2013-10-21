@@ -11,6 +11,7 @@
 .. toctree::
    :maxdepth: 2
 
+   commands/linux_loadrunner
    commands/linux_tool
    commands/linux_benchmark
    commands/linux_normal

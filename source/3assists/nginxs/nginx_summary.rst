@@ -3,8 +3,46 @@
 Nginx知识汇总
 ########################
 
+客户端类型
+---------------------
+::
+
+    if ( $http_user_agent ~ iPhone ) {
+       rewrite ^.*$ http://ios.747.cn redirect;
+    } 
+
+php代码::
+
+    $agent = $_SERVER['HTTP_USER_AGENT'];
+    if(strpos($agent,"NetFront") || strpos($agent,"iPhone")
+       || strpos($agent,"MIDP-2.0") || strpos($agent,"Opera Mini")
+       || strpos($agent,"UCWEB") || strpos($agent,"Android")
+       || strpos($agent,"Windows CE") || strpos($agent,"SymbianOS"))
+    header("Location:http://online.747.cn/747/");
+
+用wap上网::
+
+    if(strstr($_SERVER['HTTP_ACCEPT'],'vnd.wap'))
+    {
+        header("Location:http://m.747.cn/x");
+    }
+
+
+
+用于打开portal页面的打开页面::
+
+
+    // 可以使用baidu(因为是动态页面), 但m.747.cn是静态页面
+    // 当然如果使用浏览器,可能也可以打开这个页面,但那是因浏览器内部做了操作
+    location ~ /?timestamp=d+ {
+        rewrite ^(/timestamp=d+)$ http://m.747.cn/ permanent;
+    }
+
+
+
+
 跳转与代理的区别
-=======================
+-----------------------
 
 代理
 -------

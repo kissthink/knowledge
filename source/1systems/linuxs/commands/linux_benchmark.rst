@@ -7,7 +7,6 @@
 .. toctree::
    :maxdepth: 2
 
-   benchmarks/sysstat
    benchmarks/webbench
    benchmarks/ab
    benchmarks/http_load
