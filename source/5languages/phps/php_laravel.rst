@@ -22,6 +22,7 @@ Laravel——php框架
     app/config/app.php
     bootstrap/paths.php
     app/database/migrations     // 生成的表结构文件
+    app/start/global.php    // 定义
     
 
 ::

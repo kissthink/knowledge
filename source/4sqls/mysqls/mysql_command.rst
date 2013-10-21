@@ -139,6 +139,12 @@ insert命令
     insert into <DB>.<Table> values (<value1>, <value2>, ...);
     INSERT INTO <tbl_name> (<col1>, <col2>) VALUES(15,col1*2); 
 
+    insert into <DB>.<table> (<col1>, <col2>)
+        select <column1>, <column2>
+        from <table2>
+        where ...
+    ;
+
 delete命令
 ^^^^^^^^^^^^^^^^^^^
 ::

@@ -39,6 +39,35 @@ git submodule命令
     git push origin master
 
 
+* other::
+
+    git submodule foreach git pull origin master
+    or
+    git submodule foreach /path/to/some/cool/script.sh
+
+
+Remove a Submodule within git
+------------------------------------
+* Delete the relevant section from the ``.gitmodules``  file. The section would look similar to::
+
+    [submodule "vendor"]
+    path = vendor
+    url = git://github.com/some-user/some-repo.git
+
+* Stage the ``.gitmodules`` changes via command line using ``git add .gitmodule``
+* Delete the relevant section from the ``.git/config`` file, which would like this::
+
+    [submodule "vendor"]
+    url = git://github.com/some-user/some-repo.git
+
+* Run ``git rm --cached path/to/submodule`` . Don't include a trailing slash——which will lead to error.
+* Run ``rm -rf .git/modules/submodule``
+* Commit the change
+* Delete the now untracked submodule files ``rm -rf path/to/submodule
+
+
+-- from http://davidwalsh.name/git-remove-submodule
+
 
 
 
