@@ -6,12 +6,14 @@ git submodule命令
     cd ~/main
     git submodule add git://<submodule>.git ./subm
     git submodule update --init
-    git commit ./subm -m "<commit>" 
+    git add .
+    git commit -a
 
 * fetch submodule after cloning a repository::
 
     git clone git://<mainmodule>.git
-    git submodule update --init
+    git submodule init
+    git submodule update
 
 * pull upstream main repo changes and update submodule contents::
 
@@ -24,6 +26,9 @@ git submodule命令
     git pull origin/master
     cd ..
     git commit ./subm -m "update submodule reference"
+
+
+
 
 * Edit and commit file in your submodule::
 

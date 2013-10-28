@@ -7,6 +7,7 @@ ubuntu专用命令
 .. toctree::
    :maxdepth: 2
 
+   ubuntu/debain_server
    ubuntu/necessary
    ubuntu/apt-get
    ubuntu/aptitude

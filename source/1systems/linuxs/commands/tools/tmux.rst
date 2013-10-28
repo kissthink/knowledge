@@ -51,6 +51,46 @@ panel相关::
     PREFIX Space   //切换layout
 
 
+copy mode
+------------------
+
+基本命令::
+
+    PREFIX [       // 进入copy mode[一般是emacs模式]
+    Ctrl_X Ctrl_C  // 退出copy mode
+
+    // copy里面内容
+    Ctrl_X @    //进入标记状态
+    Alt_W       //拷贝里面内容,并退出copy mode
+    sh> tmux show-buffer | less    //查看刚才copy的内容
+
+    sh> tmux capture-pane && tmux save-buffer buffer.txt   //capture the current buffer to buffer.txt
+
+    // buffer是共享的
+    //你可以在一个tmux中copy后,再另一tmux中用
+
+    //抓取当前页面
+    PREFIX :     //进入命令界面
+    tmux> capture-pane     //抓取当前页面
+
+
+* 在linux和它的clipboard一起工作::
+
+    sh> sudo apt-get install xclip
+    // 修改.tmux.conf文件
+    sh> edit .tmux.conf
+    // PREFIX CTRL-c 变为拷贝
+    bind C-c run "tmux save-buffer - | xclip -i -sel clipboard"
+    // PREFIX CTRL-v 变为复制
+    bind C-v run "tmux set-buffer \"$(xclip -o -sel clipboard)\"; tmux paste-buffer"
+
+* 在mac和它的Clipboard一起工作::
+
+     $ git clone https://github.com/ChrisJohnsen/tmux-MacOSX-pasteboard.git
+     $ cd tmux-MacOSX-pasteboard/
+     $ make reattach-to-user-namespace
+
+
 
 tmux配置
 --------------

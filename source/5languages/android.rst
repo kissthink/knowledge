@@ -10,7 +10,11 @@ Contents:
 .. toctree::
    :maxdepth: 2
 
-   androids/android_requirement.rst
-   androids/android_install.rst
-   androids/android_tpl.rst
+   androids/android_requirement
+   androids/android_install
+   androids/android_tpl
+   androids/android_other
+
+
+
 
