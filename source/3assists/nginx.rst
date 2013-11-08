@@ -17,6 +17,7 @@ Contents:
    nginxs/nginx_usage2
    nginxs/nginx_config
    nginxs/nginx_example
+   nginxs/nginx_example2
    nginxs/nginx_src
    nginxs/nginx_question
    nginxs/nginx_summary

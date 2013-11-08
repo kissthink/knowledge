@@ -11,3 +11,7 @@
    tmps/updatedb
    tmps/locate
    tmps/lsattr
+   tmps/dmesg
+   tmps/lspci
+
+
