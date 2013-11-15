@@ -10,6 +10,7 @@ Contents:
 .. toctree::
    :maxdepth: 2
 
+   phps/php_basic
    phps/php_install
    phps/php_gd
    phps/php_question
@@ -17,7 +18,6 @@ Contents:
    phps/php_plugin
    phps/php_config
    phps/php_config_all
-   phps/php_basic
    phps/php_example
    phps/php_excel
    phps/php_codeignitor

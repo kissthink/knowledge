@@ -64,6 +64,7 @@ shell操作mysql命令
     ALTER TABLE <tablename> CHANGE <oldcol> <newcol> varchar(200) PRIMARY KEY COMMENT "<comment>";
     //增加字段
     ALTER TABLE <tablename> ADD <newcol> varchar(200) NOT NULL default <value> comment "<comment>";
+    ALTER TABLE <tablename> ADD <newcol> varchar(200) NOT NULL default <value> comment "<comment>" AFTER <col>;
     //增加主键
     ALTER TABLE trb1 ADD PRIMARY KEY (id);
     //删除字段

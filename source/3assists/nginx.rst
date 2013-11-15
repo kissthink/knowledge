@@ -13,16 +13,16 @@ Contents:
 .. toctree::
    :maxdepth: 2
 
-   nginxs/nginx_install
    nginxs/nginx_usage2
    nginxs/nginx_config
-   nginxs/nginx_example
-   nginxs/nginx_example2
-   nginxs/nginx_src
-   nginxs/nginx_question
    nginxs/nginx_summary
+   nginxs/nginx_example2
+   nginxs/nginx_question
    nginxs/nginx_apache
    nginxs/nginx_introduce
+   nginxs/nginx_install
    nginxs/nginx_framework
+   nginxs/nginx_example
+   nginxs/nginx_src
 
 
