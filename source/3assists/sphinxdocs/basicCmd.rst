@@ -128,13 +128,13 @@
 
             latin-1
 
-隐藏树
+* 隐藏树
 
 .. toctree::
    :hidden:
    :maxdepth: 2
 
-   simple_hiden
+    simple_hiden
 
 
 配置文件选项类型

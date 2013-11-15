@@ -1,5 +1,3 @@
-.. _python_install:
-
 python安装
 #######################
 
@@ -25,8 +23,7 @@ python安装
     curl -O http://python-distribute.org/distribute_setup.py
     python distribute_setup.py
 
-5. ``ImportError: No module named Image``错误解决
-到　`这儿Python Imaging Library (PIL) <http://www.pythonware.com/products/pil/>`_ 下载Images安装::
+5. ``ImportError: No module named Image`` 错误解决, 到　`这儿Python Imaging Library (PIL) <http://www.pythonware.com/products/pil/>`_ 下载Images安装::
 
     python setup.py install
 

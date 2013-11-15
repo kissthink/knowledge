@@ -68,10 +68,10 @@ Remove a Submodule within git
 * Run ``git rm --cached path/to/submodule`` . Don't include a trailing slash——which will lead to error.
 * Run ``rm -rf .git/modules/submodule``
 * Commit the change
-* Delete the now untracked submodule files ``rm -rf path/to/submodule
+* Delete the now untracked submodule files ``rm -rf path/to/submodule``
 
 
--- from http://davidwalsh.name/git-remove-submodule
+`From <http://davidwalsh.name/git-remove-submodule>`_
 
 
 

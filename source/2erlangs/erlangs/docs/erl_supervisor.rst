@@ -33,7 +33,7 @@ supervisor模块
     .. option:: simple_one_for_one
 
     * a simple one-for-one supervisor, where all processes are dynamically add instances of the same process type.
-    * ``delete_child/2`` and ``restart_child/2`` is invalid for ``simple_one_for_one`` supervisor and return ``{error,simple_one_for_one} `` 
+    * ``delete_child/2`` and ``restart_child/2`` is invalid for ``simple_one_for_one`` supervisor and return `` {error,simple_one_for_one} ``
 
 
 

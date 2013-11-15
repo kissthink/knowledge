@@ -3,7 +3,7 @@
 ########################
 
 什么情况用encode，什么情况又是decode呢？
-其实各种本地字符集的英文名是 ``Coded Character Set``，要转换为Coded，肯定是要encode了，同样，从里面解出来也应该叫decode
+其实各种本地字符集的英文名是 ``Coded Character Set`` ,要转换为Coded，肯定是要encode了，同样，从里面解出来也应该叫decode
 
 decode就是把其他编码转换为unicode, 等同于unicode函数
 encode就是把unicode编码的字符串转换为特定编码
