@@ -11,15 +11,9 @@ Contents:
    :maxdepth: 2
 
    phps/php_basic
-   phps/php_install
-   phps/php_gd
+   phps/php_collect
    phps/php_question
-   phps/php_captcha
-   phps/php_plugin
-   phps/php_config
-   phps/php_config_all
    phps/php_example
-   phps/php_excel
    phps/php_codeignitor
    phps/php_yaf
    phps/php_smarty

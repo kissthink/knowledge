@@ -5,7 +5,7 @@ MySQL配置文件实例详解
 
 
 
-.. literalinclude:: ./files/php.ini
+.. literalinclude:: ../files/php.ini
    :language: sh
    :linenos:
 

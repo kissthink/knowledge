@@ -85,14 +85,14 @@ Features and packages:
 SAPI modules:
 """""""""""""""""""""""
 
-.. literalinclude:: ./files/php_config_sapi.txt
+.. literalinclude:: ../files/php_config_sapi.txt
    :language: sh
    :linenos:
 
 基本配置
 """"""""""""""
 
-.. literalinclude:: ./files/php_config_general_settings.txt
+.. literalinclude:: ../files/php_config_general_settings.txt
    :language: sh
    :linenos:
 
@@ -100,7 +100,7 @@ SAPI modules:
 扩展
 """""""""
 
-.. literalinclude:: ./files/php_config_extensions.txt
+.. literalinclude:: ../files/php_config_extensions.txt
    :language: sh
    :linenos:
 

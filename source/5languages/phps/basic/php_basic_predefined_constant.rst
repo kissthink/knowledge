@@ -1,6 +1,6 @@
 .. _php_basic_predefined_constant:
 
-php预定义常是
+php预定义常题
 ==================
 
 * __LINE__: 文件中的当前行号。

@@ -83,6 +83,6 @@ php验证码实例
 
 * 运行結果如图:
 
-    .. figure:: images/yzm.bmp
+    .. figure:: ../images/yzm.bmp
        :width: 50%
 
