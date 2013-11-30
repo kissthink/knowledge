@@ -48,6 +48,9 @@ shell操作mysql命令
     //修改表名
     alter table <tableName> rename to <newTableName>
 
+    // 修改表的自增id
+    alter table tablename auto_increment=1
+
     //创建表时指定类型(MyISAM, InnoDB)
     create table <tableName>  ( 
         id int(11)  unsigned AUTO_INCREMENT PRIMARY KEY COMMENT "主键id",       -- 自增主键

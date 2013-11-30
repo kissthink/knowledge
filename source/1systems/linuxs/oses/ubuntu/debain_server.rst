@@ -25,6 +25,9 @@ debain服务器安装
 
 
 
+option::
+
+    apt-get install tcpdump
 
 
 
