@@ -28,7 +28,7 @@ Laravel——php框架
 ::
 
     Config::get('app.timezone');    //access a configuration value
-    $timezone = Config::get('app.timezone', 'UTC');     // set a default value
+    $timezone = Config::get('app.timezone', 'UTC');     // 'UTC', 'PRC'
     Config::set('database.default', 'sqlite');    // set a configuration value
 
 ::

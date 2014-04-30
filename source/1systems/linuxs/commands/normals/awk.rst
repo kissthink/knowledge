@@ -2,23 +2,72 @@
 
 awk命令
 ###############
-::
 
-     #!/bin/awk -f
 
 语法::
 
-    awk [ -F re] [parameter...] ['prog'] [-f progfile][in_file...] 
+    #!/bin/awk -f
+
+    awk [ -F fs ] [ -v var=value ] [ 'prog' | -f progfile ] [ file ...  ]
 
 说明::
 
     $0表示整个行(记录)
-    //内置变量
-    记录分隔符变量RS
-    当前工作的记录数NR
-    字段分隔符FS
-    显示文件本文件<testAwk>中第3行到第6行,以字符%分隔的第一个字段,第三个字段
-    awk -F % 'NR==3,NR==6 {printf $1  $3}' <testAwk>
+    -v <var>=<value>   //赋值后可以d {}里面使用
+
+
+内置变量
+----------
+
+* NF：当前记录中的字段个数::
+
+    >>cat c
+    1:2:3
+    1:2
+    >>awk -F ':' '{print NF}' c
+    3
+    2
+    #可用于字段数过滤
+    >>awk -F ':' '{if(NF==3)print}' c
+    1：2：3
+
+* RS:记录分隔符变量,缺省为"\n",缺省情况下，awk把一行看作一个记录；如果设置了RS，那么awk按照RS来分割记录::
+
+    >>cat d
+    hello world;I am a boy;happy
+    >>awk 'BEGIN{RS=";"}{print}' d
+    hello world
+    I am a boy
+    happy
+
+* ORS：输出记录分隔符，缺省为换行符，控制每个print语句后的输出符号::
+
+    >> cat c
+    1:2:3
+    1:2
+    >> awk 'BEGIN{ORS=";"}{print NF}' c
+    1;1;
+
+* NR:已经读出的记录数,FNR：当前文件的记录数::
+
+       #输入文件a和b，由于先扫描a，所以扫描a的时候必然有NR==FNR，然后扫描b的时候，FNR从1开始计数，而NR则接着a的行数继续计数，所以NR > FNR
+       awk 'NR==FNR{print} NR>FNR{print}' a b
+
+* FS:字段分隔符::
+
+    awk -F ':' '{print}'a 和 awk 'BEGIN{FS=":"}{print}' a是一样的
+
+* OFS：输出字段分隔符（缺省为:space:）::
+
+    >>cat b
+    1:2:3
+    4:5:6
+    >>awk -F ':' 'BEGIN{OFS=";"}{print $1,$2,$3}' b
+    #那么把OFS设置成";"后就会输出
+    1;2;3
+    4;5;6
+    
+
 
 
 
@@ -47,6 +96,9 @@ awk的内置函数
 
     awk -F: '$2=="x" {printf "%s no password!\n", $1}' /etc/passwd
 
+
+
+
 awk的流程控制
 ^^^^^^^^^^^^^^^^^^^^
 BEGIN和END(``<fileName>`` 文件字段间用 ``:`` 分隔)::
@@ -64,21 +116,6 @@ BEGIN和END(``<fileName>`` 文件字段间用 ``:`` 分隔)::
     while
     do-while
     for(<1>;<2>;<3>)
-
-实例
-^^^^^^^^^^
-
-* 把字符串按空格分隔并取出第5列::
-
-    echo $string | awk '{print $5}'
-
-* 把字符串按 ``:`` 分隔并取出第3列::
-
-    echo $string | awk -F: '{print $3}'
-
-* 把字符串按 ``/`` 分隔并取出第3列和第5列并以"-"分隔::
-
-    echo $string | awk -F '/' '{print $3"-"$4}'
 
 
 实例

@@ -34,6 +34,7 @@
 
    tools/samba
    tools/puttygen
+   tools/openssl
    tools/base64
 
 

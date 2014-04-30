@@ -7,6 +7,7 @@ php基本介绍
 
 .. toctree::
 
+   basic/php_basic_webserver
    basic/php_basic_example
    basic/php_basic_string
    basic/php_basic_function

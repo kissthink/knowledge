@@ -110,7 +110,7 @@ PHP对应的包含文件fastcgi_params
 mobapi(ssl相关)
 ------------------------------------
 
-.. literalinclude:: ./files/fastcgi_params
+.. literalinclude:: ./files/mobapi.conf
     :language: nginx
     :emphasize-lines: 12,15-18
     :linenos:

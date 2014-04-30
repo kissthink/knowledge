@@ -9,7 +9,10 @@
     string json_encode ( mixed $value)
     1. $json: This function only works with UTF-8 encoded data.
 
+::
 
+    intval($var);
+    var_dump($var);
 
 
 

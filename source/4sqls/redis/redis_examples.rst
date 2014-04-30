@@ -63,3 +63,11 @@ redis使用实例
     zadd order set 5 "e" => 0//插入重复数据失败
     zrange ordersets 0 4 => ["a", "c", "d", "e"]
 
+
+高级使用方法
+-----------------
+::
+
+    redis-cli KEYS "key_*" | xargs redis-cli DEL
+
+

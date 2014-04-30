@@ -9,14 +9,8 @@ Contents:
 .. toctree::
    :maxdepth: 2
 
-   javascripts/document
-   javascripts/html5
-   javascripts/jquery
-   javascripts/js_basic
-   javascripts/jstopic
-   javascripts/css
-   javascripts/cdn
-   javascripts/cordova
+   html5s/tmp
+
 
 
 
