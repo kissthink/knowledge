@@ -1,7 +1,11 @@
 .. _ssh_broken_pipe:
 
+ssh操作的一些相关处理
+============================
+
+
 避免SSH连接因超时闲置断开
-=============================
+--------------------------------
 
 * 用SSH过程连接电脑时，经常遇到长时间不操作而被服务器踢出的情况，常见的提示如::
 
@@ -52,6 +56,31 @@
 5. 如果你在windows下通过工具连接，可以设置为
 secureCRT：选项---终端---反空闲 中设置每隔多少秒发送一个字符串，或者是NO-OP协议包
 putty：putty -> Connection -> Seconds between keepalives ( 0 to turn off ), 默认为0, 改为300.
+
+
+
+ssh中“Host key verification failed.“的解决方案
+--------------------------------------------------
+
+这个问题的原理和比较长久的解决方案::
+
+    用OpenSSH的人都知ssh会把你每个你访问过计算机的公钥(public key)都记录在~/.ssh/known_hosts。当下次访问相同计算机时，OpenSSH会核对公钥。如果公钥不同，OpenSSH会发出警告，避免你受到DNS Hijack之类的攻击。
+    SSH对主机的public_key的检查等级是根据StrictHostKeyChecking变量来配置的。默认情况下，StrictHostKeyChecking=ask。简单所下它的三种配置值：
+
+    1.StrictHostKeyChecking=no  
+
+    #最不安全的级别，当然也没有那么多烦人的提示了，相对安全的内网测试时建议使用。如果连接server的key在本地不存在，那么就自动添加到文件中（默认是known_hosts），并且给出一个警告。
+
+    2.StrictHostKeyChecking=ask  #默认的级别，就是出现刚才的提示了。如果连接和key不匹配，给出提示，并拒绝登录。
+
+    3.StrictHostKeyChecking=yes  #最安全的级别，如果连接与key不匹配，就拒绝连接，不会提示详细信息。
+
+    对于我来说，在内网的进行的一些测试，为了方便，选择最低的安全级别。在.ssh/config（或者/etc/ssh/ssh_config）中配置：
+
+    StrictHostKeyChecking no
+    UserKnownHostsFile /dev/null
+
+
 
 
 

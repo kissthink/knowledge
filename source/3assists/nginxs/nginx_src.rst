@@ -1,5 +1,3 @@
-.. _nginx_src:
-
 Nginx源码分析
 ==================
 :作者: 新溪-gordon <programfan.info#gmail.com>
@@ -11,6 +9,6 @@ Contents:
    :maxdepth: 2
 
    src/nginx_src_framework_status
-
+   src/nginx_book_module_dev
 
 

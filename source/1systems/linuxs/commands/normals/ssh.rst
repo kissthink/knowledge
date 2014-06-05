@@ -11,6 +11,15 @@ ssh命令
     ssh -D 7070 username@yourserver.com
 
 
+* ssh-keygen命令::
+
+    // 删除known_hosts中对应host/ip的记录
+    ssh-keygen -R <hostname>
+    ssh-keygen -R <ip_address>
+
+    // 显示key and ascii art representation
+    ssh-keygen -l -f <filePath>
+    ssh-keygen -lv -f ~/.ssh/known_hosts  //以图形化的方式展示
 
 
 

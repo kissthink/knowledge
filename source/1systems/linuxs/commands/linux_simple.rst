@@ -6,6 +6,7 @@
 .. toctree::
    :maxdepth: 2
 
+   simples/windows
    simples/cat
    simples/cd
    simples/cp

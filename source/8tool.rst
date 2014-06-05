@@ -14,5 +14,6 @@
 
    8tools/nagios
    8tools/dia
+   8tools/doxygen
 
 

@@ -14,5 +14,7 @@ linux下的功能模块可以分为静态内核模块和动态功能模块
    kernels/modprobe
    kernels/lsmod
    kernels/sysctl
+   kernels/supervisor
 
+   kernels/make
 

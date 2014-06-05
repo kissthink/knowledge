@@ -16,6 +16,7 @@
    3assists/git
    3assists/nginx
    3assists/sphinxdoc
+   3assists/graphviz
 
 
 

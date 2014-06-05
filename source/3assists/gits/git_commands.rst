@@ -13,6 +13,7 @@ Git命令列表
    commands/git_diff
    commands/git_blame
    commands/git_bisect
+   commands/git_reset
 
    commands/git_format_type
    commands/git_submodule

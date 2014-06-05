@@ -30,5 +30,9 @@ php插件安装
 
     /usr/local/php/bin/php -m
 
+* PHP information and configuration::
+
+    php -i
+    php --info
 
 

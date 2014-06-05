@@ -10,4 +10,4 @@ JAVA文档
    :maxdepth: 2
 
    javas/java_install
-
+   javas/java_config

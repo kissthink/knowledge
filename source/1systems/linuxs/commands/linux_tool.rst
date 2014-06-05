@@ -12,6 +12,7 @@
 
    tools/vagrant
    tools/tmux
+   tools/screen
    tools/pgrep
    tools/pkill
 

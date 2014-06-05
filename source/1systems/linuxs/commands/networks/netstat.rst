@@ -3,52 +3,49 @@
 netstat命令使用
 ######################
 
-SYNOPSIS
-===========
-.. option:: -t, --tcp
+基本用法::
 
-   tcp
+    netstat -nltp   // debain用法
+    netstat -nlup
 
-.. option:: -u, --udp
-
-   udp
+    netstat -anp tpc // freebsd用法
 
 
+描述(linux)
+===============
+::
 
-DESCRIPTION
-==============
-.. option:: -r, --route
+   --statistics , -s
+       Display summary statistics for each protocol.
 
-   查看路由表, 与 ``route -e`` 命令結果一样
+   --route , -r
+       Display the kernel routing tables.
+
+   --interface=iface , -i
+       Display a table of all network interfaces, or the specified iface).
 
 
+选项说明(linux)
+======================
+::
 
-OPTIONS
-==========
+   --numeric , -n
+       Show numerical addresses instead of trying to determine symbolic host, port or user names.
 
-.. option:: -n, --numberic
+   -c, --continuous
+       This will cause netstat to print the selected information every second continuously.
 
-   展示数字化地址, 而不用转化ip、port或用户名(可以加速操作)
+   -l, --listening
+       Show only listening sockets.  (These are omitted by default.)
 
-.. option:: -c, --continuous(默认是 ``1s`` )
+   -a, --all
+       Show both listening and non-listening sockets.  With the --interfaces option, show interfaces that are not marked
 
-   每隔一个固定时间, 执行该netstat命令
+   -p, --program
+       Show the PID and name of the program to which each socket belongs.
 
-.. option:: -s, --statistics
-
-   按各个协议进行统计
-
-.. option:: -p, --program
-
-   显示建立相关链接的程序名
-
-.. option:: -l, --listening
-
-   仅列出有在 Listen 的sockets(默认选项)
-
-.. option:: -a, --all
-
-    列出listen&non-listen 的sockets, PS: With the ``--interfaces`` option, show interfaces that are not up
+   -u, --udp
+   -t, --tcp
 
 
 实例

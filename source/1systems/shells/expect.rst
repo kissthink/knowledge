@@ -14,4 +14,33 @@ expect相关文档
     $argv # 参数数组,使用$argv [n]获得, n从0开始
 
 
+一个简单的实例
+-------------------
+
+::
+
+    #!/usr/bin/expect -f
+
+    spawn ssh zhaoweiguo@relay.corp.ganji.com
+    expect "zhaoweiguo@relay.corp.ganji.com*"
+
+    send "W1MiGN6QHe1wXoV2\r"
+    #expect "nst*"
+    sleep 0.2
+
+
+    send "ssh -o StrictHostKeyChecking=no zhaoweiguo@bw-vm-caifeng\r"
+    #expect "zhaoweiguo@bw-vm-caifeng*"
+    expect "Password*"
+    send "Q!W@e3r4\r"
+
+    #sleep 0.2
+    #expect "hostname:*"
+    #send "$host\r"
+
+    interact
+
+
+
+
 

@@ -26,4 +26,4 @@ node实例
     npm install  -g grunt-cli   //  JavaScript Task Runner
     npm install grunt
 
-
+    grunt build

@@ -16,6 +16,7 @@
    5languages/javascript
    5languages/c
    5languages/python
+   5languages/scala
    5languages/lua
    5languages/ruby
    5languages/lisp

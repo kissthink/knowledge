@@ -83,6 +83,9 @@ client intended to send too large body: 12750515 bytes
 
     client_max_body_size 2M;     # 限制http请求的body大小在2M以内, 一般用于限制附件的大小
 
+如果是php还要修改php.ini::
+
+    upload_max_filesize = 10M   // 否则上传附件有问题
 
 
 
