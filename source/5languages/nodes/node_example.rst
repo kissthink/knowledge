@@ -3,6 +3,14 @@
 node实例
 #######################
 
+* 官网: http://nodejs.org
+* 安装::
+
+    ./configure --prefix=/usr/local/<nodeName>
+    make
+    sudo make install
+
+
 * 启动与依赖::
 
     npm install nodemon -g   // 使用命令nodemon app.js, 保存时自动加载

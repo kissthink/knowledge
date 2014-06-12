@@ -14,7 +14,7 @@ npm命令
     package.json
     Gruntfile[.js|.coffee]
 
-
+    npm install nodemon --global
 
 
 

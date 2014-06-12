@@ -1,15 +1,7 @@
-.. _ibrowse_introduce:
-
 简介
 ====
 
-.. _introduce_feature:
-
-ibrowse特性
-============
-
-
-ibrowse是一个HTTP客户端,下面是ibrowse的特性:
+ibrowse是一个HTTP客户端,下面是ibrowse的特性::
 
         - RFC2616 compliant (AFAIK) 
         - 支持 GET, POST, OPTIONS, HEAD, PUT, DELETE, TRACE, MKCOL, PROPFIND, PROPPATCH, LOCK, UNLOCK, MOVE and COPY

@@ -12,6 +12,7 @@
 .. toctree::
    :maxdepth: 1
 
+   6technologies/zookeeper
    6technologies/sphinx
    6technologies/freeswitch
    6technologies/asterisk

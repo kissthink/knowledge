@@ -3,8 +3,6 @@
 暂时
 =====
 
-
-
 * First, send a json type html request::
 
     erl>>ibrowse:send_req("http://192.168.10.102:8000/baseinfo", [{"Accept","application/json"}], get, [], []).
