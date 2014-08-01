@@ -6,9 +6,10 @@ MongoDB簡单用法
 使用MongoDB客户端::
 
     mongo            # 启动客户端
-    use <dbName>     #使用<dbName>数据库
-    db               #查看当前所在数据库
-    show collections   # 查看数据库列表
+    show dbs         # 察看db列表
+    use <dbName>     # 使用<dbName>数据库
+    db               # 查看当前所在数据库
+    show collections   # 查看此数据库的表列表
 
 数据插入
 ------------

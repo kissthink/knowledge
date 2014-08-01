@@ -14,9 +14,16 @@ cat <文件名>
 
      cat xaa xab xac > file.split
 
+     cat << EOF > newfile.txt
+        > content1
+        > content2
+        > EOF
+
 给所有输出加上行号::
 
    cat -n file.txt
+
+
 
 
 

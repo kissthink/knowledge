@@ -12,4 +12,5 @@ MongoDB的使用
    mongodbs/mongodb_usage
    mongodbs/mongodb_simple
    mongodbs/mongodb_view
+   mongodbs/mongodb_data
 

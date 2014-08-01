@@ -10,5 +10,7 @@ Contents:
 
    src/nginx_src_framework_status
    src/nginx_book_module_dev
-
+   src/nginx_src_summary
+   src/nginx_src_struct
+   src/nginx_src_flow
 

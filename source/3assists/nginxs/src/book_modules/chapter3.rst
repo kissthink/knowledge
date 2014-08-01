@@ -63,7 +63,7 @@ ngx_list_t相关函数::
 **ngx_buf_t** 数据结构::
 
     typedef struct ngx_buf_s ngx_buf_t;
-    typedef void   *ngx_buf_tag_t;
+    typedef void* ngx_buf_tag_t;
     struct ngx_buf_s {
         u_char      *pos;
         u_char      *last;
@@ -97,6 +97,9 @@ ngx_list_t相关函数::
         ngx_buf_t     *buf;
         ngx_chain_t   *next;
     };
+
+
+
 
 如何将自己的nginx模块编译进Nginx
 ---------------------------------------

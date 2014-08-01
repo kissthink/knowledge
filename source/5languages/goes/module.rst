@@ -1,10 +1,10 @@
 代码片段
 ==================
-``flag`` 解析命令参数::
+``flag`` 解析命令参数:
 
-    var infile *string = flag.String("i", "infile", "File contains values for sorting")
-    // 使用 ./cmd -i <file>时
-    // infile=<file>
+.. literalinclude:: ./codes/flag.go
+   :language: go
+   :linenos:
 
 ``net`` 网络编程::
 

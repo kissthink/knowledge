@@ -24,5 +24,6 @@ Contents:
    nginxs/nginx_framework
    nginxs/nginx_example
    nginxs/nginx_src
+   nginxs/nginx_addon
 
 

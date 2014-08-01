@@ -4,6 +4,6 @@ Nginx源码架构(图)
 ===================
 
 .. figure:: ../image/nginx_src_framework.png
-   :width: 400%
+   :width: 200%
 
 
