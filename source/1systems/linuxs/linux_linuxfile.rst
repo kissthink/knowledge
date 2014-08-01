@@ -10,7 +10,7 @@ linux系统文件说明:
 .. toctree::
    :maxdepth: 2
 
-   files/linux
-   files/ubuntu
-   files/centos   
+   linuxfiles/linux
+   linuxfiles/ubuntu
+   linuxfiles/centos   
 

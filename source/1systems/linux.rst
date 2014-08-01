@@ -12,7 +12,7 @@ Linux文档
 .. toctree::
    :maxdepth: 2
 
-   linuxs/linux_file
+   linuxs/linux_linuxfile
    linuxs/os
    linuxs/linux_command
    linuxs/special
