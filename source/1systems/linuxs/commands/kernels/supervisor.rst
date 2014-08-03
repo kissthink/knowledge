@@ -1,5 +1,8 @@
 supervisor命令
 ==================
+文档地址:
+
+http://supervisord.org/
 
 安装::
 
@@ -31,8 +34,9 @@ supervisor命令
 
 每个进程的配置文件都可以单独分拆，放在 ``/etc/supervisor/conf.d/`` 目录下，以 ``.conf`` 作为扩展名,以 ``app.conf`` 为例:
 
-    .. literalinclude:: ../../files/supervisord.conf
-       :linenos:
+.. literalinclude:: ../../files/supervisord.conf
+   :language: mysql
+   :linenos:
 
 重启supervisor，让配置文件生效::
 
