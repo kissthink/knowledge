@@ -60,7 +60,11 @@ GIT命令
 
       3. ``git rebase`` ::
 
-          $git rebase //待定
+          // 可以用来修改commit的内容
+          $git rebase -i <branch>/<tag>/<version>
+          //实例:
+          git rebase -i master
+
 
       4. ``git reset`` (将当前的工作目录完全回滚到指定的版本号), 例:有A-G五次提交的版本，其中C的版本号是 bbaf6fb5060b4875b18ff9ff637ce118256d6f20，我们执行::
 

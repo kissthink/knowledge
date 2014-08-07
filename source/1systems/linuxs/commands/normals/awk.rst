@@ -168,3 +168,9 @@ BEGIN和END(``<fileName>`` 文件字段间用 ``:`` 分隔)::
     awk '/^root/,/^mysql/' <filename>
 
 
+实例:
+
+.. interalinclude:: ../../files/awk_nginxlog.sh
+   :language: sh
+   :linenos:
+

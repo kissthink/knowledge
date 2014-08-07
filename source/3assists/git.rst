@@ -18,5 +18,6 @@ Contents:
    gits/git_command2.rst
    gits/git_commands.rst
    gits/svn
+   gits/hg
 
 
