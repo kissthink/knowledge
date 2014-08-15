@@ -55,6 +55,8 @@ LNMP
 
    mactex:  pdf生成工具
 
+   Proxifier: 1.37版本的sn: SNYVP-2RQK0-0QKR1-AFC77-V2J90(用户名随便填)
+
 
 
 
