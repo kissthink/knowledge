@@ -11,6 +11,7 @@
    :maxdepth: 3
 
    tools/vagrant
+   tools/docker
    tools/tmux
    tools/screen
    tools/pgrep
