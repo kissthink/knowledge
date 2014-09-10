@@ -1,7 +1,38 @@
 docker命令使用
 =======================
 
-$ docker --help::
+文档: http://docs.docker.com/
+docker的cloud: https://registry.hub.docker.com
+      https://hub.docker.com/
+
+常见命令::
+
+    $ docker            # 查看命令列表
+    $ docker version    # 查看版本
+
+    $ docker images        # 查看image列表
+
+    $ docker run ubuntu:14.04 /bin/cat /etc/issue   # 执行docker命令
+
+    $ docker run -t -i ubuntu:14.04 /bin/bash   # shell登陆 -t(--tty=true) and -i(--interactive=true)
+
+    # 后台执行命令 -d: 后台运行
+    $ docker run -d ubuntu:14.04 /bin/sh -c "while true; do echo hello world; sleep 1; done"
+    1e5535038e285177d5214659a068137486f96ee5c2e85a4ac52dc83f2ebe4147
+    # 查看docker的进程
+    $ docker ps
+    CONTAINER ID  IMAGE         COMMAND               CREATED        STATUS       PORTS NAMES
+    1e5535038e28  ubuntu:14.04  /bin/sh -c 'while tr  2 minutes ago  Up 1 minute        insane_babbage
+    # 查看日志
+    $ docker logs insane_babbage
+    # 停止此进程
+    $ docker stop insane_babbage
+
+    $ docker attach      # 查看attach命令的使用
+
+
+
+* $ docker --help::
 
     Usage: Docker [OPTIONS] COMMAND [arg...]
     -H="127.0.0.1:4243": Host:port to bind/connect to
@@ -41,7 +72,7 @@ $ docker --help::
 
     
 
-$ docker run::
+* $ docker run::
 
     Usage: Docker run [OPTIONS] IMAGE COMMAND [ARG...]
 

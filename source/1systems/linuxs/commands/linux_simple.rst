@@ -9,6 +9,7 @@
    simples/windows
    simples/cat
    simples/cd
+   simples/sh
    simples/cp
    simples/du
    simples/file

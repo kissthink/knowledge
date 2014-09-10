@@ -1,8 +1,20 @@
 supervisor命令
 ==================
-文档地址:
+文档地址: http://supervisord.org/
 
-http://supervisord.org/
+命令::
+
+    supervisorctl help      // 帮助信息
+
+    supervisorctl reload    // 重启服务
+    supervisorctl update    // 更新配置文件
+
+
+
+    supervisorctl start app  
+    supervisorctl stop app 
+
+
 
 安装::
 
@@ -38,10 +50,6 @@ http://supervisord.org/
    :language: mysql
    :linenos:
 
-重启supervisor，让配置文件生效::
-
-    supervisorctl start app  
-    supervisorctl stop app 
 
 如果要在命令行中使用变量，就需要自己先编写一个shell脚本::
 
