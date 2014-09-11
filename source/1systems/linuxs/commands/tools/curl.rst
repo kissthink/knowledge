@@ -123,3 +123,27 @@ curl命令实例
     curl http://192.168.10.102:8000/tongji/baseinfo -H "Accept:application/json"
     curl http://192.168.10.102:8022/tongji/baseinfo -H "Accept:application/json" -d "rid=\"rid\"&sim=\"sim\"&mac=\"mac\"&imei=\"imei\"&device=\"device\"\&&resolution=\"resolution\"&os=\"android\"&&osversion=\"osversion\"&&timestamp=\"431432143214\""   
 
+* ``multipart/form-data`` 类型请求::
+
+    // 这种是正式的
+    // http.content_type: multipart/form-data; boundary=----------------------------8ed7c16ae35a
+    // 多个form间用boundary关联，多个form使用同一个boundary
+    curl -v http://127.0.0.1:9090/addservice -include --form key=1122-3434 --form destName=hello.test.unit --form upload=@/tmp/localfile
+    // 指定boundary的例子@undo
+    curl -X POST -H "Content-Type: multipart/form-data; boundary=----------------------------4ebf00fbcf09" -d $'------------------------------4ebf00fbcf09\r\nContent-Disposition: form-data; name="example"\r\n\r\ntest\r\n------------------------------4ebf00fbcf09--\r\n' http://localhost:3000/test
+
+    //指定文件类型@undo
+    curl -H "Content-Type: multipart/related" \
+  --form "data=@example.jpg;type=image/jpeg" http://localhost:3000/test
+
+
+    // 指定为multipart/form但没有
+    curl -v -XPOST -H 'Content-Type: multipart/form-data' http://192.168.35.141:9090/addservice?key=1122-3434&destName=hello.test.unit&zkidc=qa
+
+
+
+
+
+
+
+
