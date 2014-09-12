@@ -17,6 +17,10 @@ tar -c|x|u|r|t[z|j][v] -f <归档文件> [未打包文件]
     -t, --list: list the contents of an archive
     -f, --file=ARCHIVE:use archive file or device ARCHIVE
 
+* 解压到指定目录::
+
+    tar -C <folder> -zxf <file>.tar.gz
+
 
 * 查看压缩文件内容::
 

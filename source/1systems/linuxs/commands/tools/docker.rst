@@ -1,9 +1,9 @@
 docker命令使用
 =======================
 
-文档: http://docs.docker.com/
-docker的cloud: https://registry.hub.docker.com
-      https://hub.docker.com/
+* 文档: http://docs.docker.com/
+* docker的cloud查询: https://registry.hub.docker.com
+* docker管理: https://hub.docker.com/
 
 常见命令::
 

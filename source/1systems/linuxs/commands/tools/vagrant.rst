@@ -1,10 +1,10 @@
 vagrant命令
 #################
 
-site: http://www.vagrantup.com
-一些共享box: http://www.vagrantbox.es/
-vagrant的cloud: https://vagrantcloud.com/
-文档:http://docs.vagrantup.com/
+* site: http://www.vagrantup.com
+* 一些共享box: http://www.vagrantbox.es/
+* vagrant的cloud: https://vagrantcloud.com/
+* 文档:http://docs.vagrantup.com/
 
 简单命令::
 

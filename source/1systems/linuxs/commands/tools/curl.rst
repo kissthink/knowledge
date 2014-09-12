@@ -139,12 +139,19 @@ curl命令实例
 
     //指定文件类型@undo
     curl -H "Content-Type: multipart/related" \
-  --form "data=@example.jpg;type=image/jpeg" http://localhost:3000/test
+    --form "data=@example.jpg;type=image/jpeg" http://localhost:3000/test
 
 
     // 指定为multipart/form但没有
     curl -v -XPOST -H 'Content-Type: multipart/form-data' http://192.168.35.141:9090/addservice?key=1122-3434&destName=hello.test.unit&zkidc=qa
 
+
+
+翻墙相关::
+
+    // -x, --proxy <[protocol://][user:password@]proxyhost[:port]>
+    // 默认为http协议
+    curl -x socks5://192.168.14.40:6500 "http://www.youtube.com"   // 要注意dns混乱问题
 
 
 
