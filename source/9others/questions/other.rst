@@ -13,9 +13,9 @@
         locale: Cannot set LC_MESSAGES to default locale: No such file or directory
         locale: Cannot set LC_ALL to default locale: No such file or directory
 
-    * 处理方法:
+    * 处理方法::
 
-        * /usr/share/locales/install-language-pack en_US
-        * export LC_CTYPE="en_US:UTF-8"
+        /usr/share/locales/install-language-pack en_US
+        export LC_CTYPE="en_US:UTF-8"
 
 

@@ -73,29 +73,6 @@ docker命令使用
     $ sudo docker commit -m="Added json gem" -a="Kate Smith" 0b2616b0e5a8 zhaoweiguo/sinatra:v2
 
 
-Dockerfile文件::
-
-    # This is a comment
-    FROM ubuntu:14.04
-    MAINTAINER Kate Smith <ksmith@example.com>
-    RUN apt-get update && apt-get install -y ruby ruby-dev
-    RUN gem install sinatra
-
-使用Dockerfile文件::
-
-    // -t: --tag=""
-    // 使用 . 指定是当前目录的Dockerfile文件
-    $ sudo docker build -t="zhaoweiguo/sinatra:v2" .
-    // 这时使用docker images可以查看到zhaoweiguo/sinatra:v2的images
-
-    // 为已存在的images加tag:
-    $ sudo docker tag 5db5f8471261 zhaoweiguo/sinatra:devel
-    // 查看指定images的tag列表
-    $ sudo docker images ouruser/sinatra
-
-    // 把images push到Docker Hub上
-    $ sudo docker push ouruser/sinatra
-
 删除images::
 
     $ sudo docker rmi training/sinatra
@@ -208,6 +185,133 @@ docker volume::
     -u="": Username or UID
     -v=map[]: Attach a data volume
     -volumes-from="": Mount volumes from the specified container
+
+
+
+Dockerfile文件
+-----------------
+实例::
+
+    # This is a comment
+    FROM ubuntu:14.04
+    MAINTAINER Kate Smith <ksmith@example.com>
+    RUN apt-get update && apt-get install -y ruby ruby-dev
+    RUN gem install sinatra
+
+使用Dockerfile文件::
+
+    // -t: --tag=""
+    // 使用 . 指定是当前目录的Dockerfile文件
+    $ sudo docker build -t="zhaoweiguo/sinatra:v2" .
+    // 这时使用docker images可以查看到zhaoweiguo/sinatra:v2的images
+
+    // 为已存在的images加tag:
+    $ sudo docker tag 5db5f8471261 zhaoweiguo/sinatra:devel
+    // 查看指定images的tag列表
+    $ sudo docker images ouruser/sinatra
+
+    // 把images push到Docker Hub上
+    $ sudo docker push ouruser/sinatra
+
+Dockerfile文件说明
+----------------------
+* https://docs.docker.com/reference/builder/
+
+FROM::
+
+    # 指定image来源
+    FROM <image>
+    FROM <image>:<tag>
+    e.g. FROM zhaoweiguo/utuntu:12.02
+
+MAINTAINER::
+
+    # 设定维护者
+    MAINTAINER <name>
+
+
+RUN::
+
+    # 运行命令，会保存cache与ADD命令对应
+    RUN <command>
+    RUN ["executable", "param1", "param2"]
+    e.g. RUN ["/bin/bash", "-c", "echo hello"]
+
+CMD::
+
+    # The main purpose of a CMD is to provide defaults for an executing container. 
+    CMD ["executable", "param1", "param2"]    # (like an exec, this is the preferred form)
+    CMD ["param1","param2"]       #  (as default parameters to ENTRYPOINT)
+    CMD command param1 param2     #  (as a shell)
+    e.g. CMD echo "This is a test." | wc -
+    e.g. CMD ["/usr/bin/wc","--help"]
+    Note: don't confuse RUN with CMD. RUN actually runs a command and commits the result; CMD does not execute anything at build time, but specifies the intended command for the image.
+
+EXPOSE::
+
+    # 监听指定网络端口,用于container间使用dockerlinks
+    EXPOSE <port> [<port>...]
+
+ENV::
+
+    # 设定环境变量environment
+    ENV <key> <value>
+    # 可以通过docker inspect查看这些值
+    # 可以通过docker run --env <key>=<value>修改这些值
+    e.g. ENV DEBIAN_FRONTEND noninteractive   # will persist when the container is run interactively; for example: docker run -t -i image bash
+
+ADD::
+
+    # 拷贝一个宿主机上的文件<src>到container的<dest>目录下
+    ADD <src> <dest>
+    # @todo 还有好多信息
+
+COPY::
+
+    # 貌似和ADD命令差不大功能
+    COPY <src> <dest>
+
+ENTRYPOINT::
+
+    # 一个Dockerfile文件中只能有一个ENTRYPOINT
+    # 如果有ENTRYPOINT那么整个container可看作一个executable文件
+    # 执行的命令不会被docker run覆盖(与CMD不同)
+    ENTRYPOINT  ["executable", "param1", "param2"]   # (like an exec, the preferred form)
+    ENTRYPOINT command param1 param2    # (as a shell)
+
+VOLUME::
+
+    # 磁盘挂载
+    VOLUME ["/data"]
+    VOLUME /var/log
+
+USER::
+
+    # sets the user name or UID
+    USER daemon
+
+WORKDIR::
+
+    # 工作目录
+    WORKDIR /path/to/workdir
+    e.g.:
+    WORKDIR /a
+    WORKDIR b
+    WORKDIR c
+    RUN pwd
+    # /a/b/c
+
+ONBUILD::
+
+    ONBUILD [INSTRUCTION]
+
+
+
+* 实例:
+
+.. literalinclude:: ./files/Dockerfile
+   :language: mysql
+   :linenos:
 
 
 
