@@ -20,43 +20,48 @@
 
 ::
     5> ibrowse:start().
-    //一个简单的get应用::
+
+* 一个简单的get应用::
+
     6> ibrowse:send_req("http://intranet/messenger/", [], get).
     {ok,"200",
-      [{"Server","Microsoft-IIS/5.0"},
-       {"Content-Location","http://intranet/messenger/index.html"},
-       {"Date","Fri, 17 Dec 2004 15:16:19 GMT"},
-       {"Content-Type","text/html"},
-       {"Accept-Ranges","bytes"},
-       {"Last-Modified","Fri, 17 Dec 2004 08:38:21 GMT"},
-       {"Etag","\"aa7c9dc313e4c41:d77\""},
-       {"Content-Length","953"}],
-      "<html>\r\n\r\n<head>\r\n<title>Messenger</title></head><body>......"}
+        [{"Server","Microsoft-IIS/5.0"},
+        {"Content-Location","http://intranet/messenger/index.html"},
+        {"Date","Fri, 17 Dec 2004 15:16:19 GMT"},
+        {"Content-Type","text/html"},
+        {"Accept-Ranges","bytes"},
+        {"Last-Modified","Fri, 17 Dec 2004 08:38:21 GMT"},
+        {"Etag","\"aa7c9dc313e4c41:d77\""},
+        {"Content-Length","953"}],
+        "<html>\r\n\r\n<head>\r\n<title>Messenger</title></head><body>......"
+    }
 
-    //一个代理的get应用::
-    7> ibrowse:send_req("http://www.google.com/", [], get, [], 
-                 [{proxy_user, "XXXXX"},
-                  {proxy_password, "XXXXX"},
-                  {proxy_host, "proxy"},
-                  {proxy_port, 8080}], 1000).
+* 一个代理的get应用::
+
+    7> ibrowse:send_req("http://www.google.com/", [], get, [],
+        [{proxy_user, "XXXXX"},
+        {proxy_password, "XXXXX"},
+        {proxy_host, "proxy"},
+        {proxy_port, 8080}], 1000
+    ).
+
         {ok,"302",
-            [{"Date","Fri, 17 Dec 2004 15:22:56 GMT"},
+             [{"Date","Fri, 17 Dec 2004 15:22:56 GMT"},
              {"Content-Length","217"},
              {"Content-Type","text/html"},
-             {"Set-Cookie",
-                 "PREF=ID=f58155c797f96096; expires=Sun, 17-Jan-2038 19:14:07 GMT;"},
+             {"Set-Cookie", "PREF=ID=f58155c797f96096; expires=Sun, 17-Jan-2038 19:14:07 GMT;"},
              {"Server","GWS/2.1"},
              {"Location", "http://www.google.co.uk/cxfer?c=PREF%3D:TM%3D1103296999:S%3Do8bEY2FIHwdyGenS&prev=/"},
              {"Via","1.1 netapp01 (NetCache NetApp/5.5R2)"}],
              "<HTML><HEAD><TITLE>302 Moved</TITLE></HEAD><BODY>\n<H1>302 Moved</H1>\r\n</BODY></HTML>\r\n"}
 
 
-    //把get請求后的結果存放到文件中:
+//把get請求后的結果存放到文件中:
 
-        * 创建一个临时文件, 返回这个刚创建的临时文件的文件名
-        * 只有返回状态是200区间的才把請求的結果写入到这个临时文件中
-        * 下载的目录可以用应用环境变量 ``download_dir`` ,默认是当前工作目录
-        * 命令::
+* 创建一个临时文件, 返回这个刚创建的临时文件的文件名
+* 只有返回状态是200区间的才把請求的結果写入到这个临时文件中
+* 下载的目录可以用应用环境变量 ``download_dir`` ,默认是当前工作目录
+* 命令::
 
         8> ibrowse:send_req("http://www.747.cn/", [], get, [], [{save_response_to_file, true}], 1000).
             {ok,"200",
