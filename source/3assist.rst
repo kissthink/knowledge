@@ -17,6 +17,7 @@
    3assists/nginx
    3assists/sphinxdoc
    3assists/graphviz
+   3assists/thrift
 
 
 

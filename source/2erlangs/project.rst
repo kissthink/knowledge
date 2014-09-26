@@ -14,7 +14,6 @@
    projects/cowboy
    projects/poolboy
    projects/larger
-   projects/thrift
    projects/erlydtl
    projects/ibrowse
    projects/tsung
