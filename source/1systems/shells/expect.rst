@@ -21,16 +21,16 @@ expect相关文档
 
     #!/usr/bin/expect -f
 
-    spawn ssh zhaoweiguo@relay.corp.ganji.com
-    expect "zhaoweiguo@relay.corp.ganji.com*"
+    spawn ssh zhaoweiguo@<domain>
+    expect "zhaoweiguo@<domain>*"
 
     send "W1MiGN6QHe1wXoV2\r"
     #expect "nst*"
     sleep 0.2
 
 
-    send "ssh -o StrictHostKeyChecking=no zhaoweiguo@bw-vm-caifeng\r"
-    #expect "zhaoweiguo@bw-vm-caifeng*"
+    send "ssh -o StrictHostKeyChecking=no zhaoweiguo@bw-vm\r"
+    #expect "zhaoweiguo@bw-vm*"
     expect "Password*"
     send "Q!W@e3r4\r"
 

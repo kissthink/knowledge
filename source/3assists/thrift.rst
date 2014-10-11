@@ -15,6 +15,13 @@ a remote procedure call framework for "scalable cross-languages services develop
 
     thrift --gen <language> <Thrift filename>
 
+    // -r:   -r[ecurse]  Also generate included files
+    thrift -r --gen <language> <Thrift filename>
+
+    // php相关
+    thrift -r --gen php <Thrift filename>
+    // 生成php server相关代码
+    thrift -r --gen php:server <Thrift filename>
 
 
 实例

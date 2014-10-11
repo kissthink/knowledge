@@ -20,3 +20,12 @@ emacs使用
 * 在每行的开头增加一字符串"bloogie"::
 
     M-x replace-string RET C-Q C-J RET C-Q C-J bloogie SPACE RET
+
+* 调出菜单::
+
+    F10
+    M+x menu-bar-open
+    M+~
+
+
+
