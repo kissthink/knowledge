@@ -88,6 +88,12 @@ GOPATH::
     // 单元测试
     函数命名规则: Test<fun>(t *testing.T) {}
     命令: go test <package>
+
+    级联单元测试命令:
+    go test <package>/...
+    or 
+    go test <folder>/...
+
     import "github.com/bmizerany/assert"
 
     assert.Equal(t, <yourData>, <testData>)
