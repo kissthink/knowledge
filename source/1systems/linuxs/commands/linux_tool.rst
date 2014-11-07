@@ -18,6 +18,7 @@
    tools/pkill
 
    tools/tcpdump
+   tools/tcpcopy
 
    tools/curl
    tools/mail
