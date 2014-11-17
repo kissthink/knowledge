@@ -17,7 +17,7 @@ aptitude使用快速参考
 
     * 如图:
 
-        .. figure:: ../../image/os_ubuntu_aptitude_1.png
+        .. figure:: ../../images/os_ubuntu_aptitude_1.png
            :width: 80%
 
 * 区域功能:

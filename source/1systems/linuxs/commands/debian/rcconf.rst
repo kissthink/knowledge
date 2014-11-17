@@ -17,7 +17,7 @@ rcconf命令
 
 * 运行界面跟红帽子的 ntsysv 差不多:
 
-    .. figure:: ../../image/rcconf1_command.jpg
+    .. figure:: ../../images/rcconf1_command.jpg
        :width: 80%
 
 

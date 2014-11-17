@@ -24,10 +24,11 @@ Session相关::
 
     tmux new -s <tmuxName>   // tmux new-session -s <tmuxName>
     tmux new -s <tmuxName> -d   // 后台创建一新session
-    PREFIX d    //离开session
     tmux ls    // tmux list-sessions
     tmux attach -t <tmuxName>     // 连接指定session
     tmux kill-session -t <tmuxName>
+    PREFIX d    //离开session
+    PREFIX s    // 列出session列表
 
 windows相关::
 
@@ -41,7 +42,7 @@ windows相关::
     PREFIX w      //把当前session下的window列表列出
     PREFIX &      // 同exit,有确认窗口
 
-panel相关::
+panel相关(挺好用)::
 
     PREFIX %     //vertically split into two panels
     PREFIX "     //horizontally split into two panels
@@ -69,9 +70,15 @@ copy mode
     // buffer是共享的
     //你可以在一个tmux中copy后,再另一tmux中用
 
-    //抓取当前页面
-    PREFIX :     //进入命令界面
+
+进入命令界面::
+
+    PREFIX :   //进入命令界面
+    
     tmux> capture-pane     //抓取当前页面
+    tmux> show messages    // 展示消息列表
+    tmux> show buffer      //
+    tmux> ...
 
 
 * 在linux和它的clipboard一起工作::

@@ -7,7 +7,7 @@ linux工具
 * DevOps 的工具链项目就是这些社区当中的一员
 * 它们可以分为三大类:预备、配置管理和监控
 
-.. figure:: image/linux_tool.png
+.. figure:: images/linux_tool.png
    :width: 40%
 
 

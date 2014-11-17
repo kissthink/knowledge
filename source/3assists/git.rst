@@ -10,13 +10,11 @@ Contents:
 .. toctree::
    :maxdepth: 2
 
-   gits/git_introduce.rst
-   gits/git_install.rst
-   gits/git_ignore
-   gits/git_config
+   gits/git_usage
    gits/git_command.rst
    gits/git_command2.rst
    gits/git_commands.rst
+   gits/git_other
    gits/svn
    gits/hg
 

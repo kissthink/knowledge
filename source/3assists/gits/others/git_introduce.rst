@@ -17,7 +17,7 @@ Git 特点::
 
 **Git源码**
     #. 源码中各语言所占比例:
-        .. figure:: image/git_used_language.png
+        .. figure:: ../image/git_used_language.png
            :width: 70%
 
 **文件存储机制**

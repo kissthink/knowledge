@@ -31,7 +31,7 @@ crontab命令简析
 
     * 如图:
 
-      .. figure:: ../../image/crontab1_file_format.jpg
+      .. figure:: ../../images/crontab1_file_format.jpg
          :width: 50%
 
     * 具体说明:
