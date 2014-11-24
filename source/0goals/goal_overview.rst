@@ -105,6 +105,9 @@ JS相关
 * `Laravel's templating system <http://laravel.com/docs/templates>`
 * crawler
 
+* gitlab + gitcli
+* statsd + graphite + seyren
+
 
 其他
 =============

@@ -16,6 +16,8 @@
    8tools/dia
    8tools/doxygen
    8tools/wireshark
+   8tools/statsd
+   8tools/graphite
 
 
 

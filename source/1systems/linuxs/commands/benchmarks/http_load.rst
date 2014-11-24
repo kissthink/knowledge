@@ -3,9 +3,10 @@
 http_load命令使用方法
 =========================
 
-* 安装:
+* 安装::
 
-    下载安装，安装地址自己查
+    //下载安装，安装地址:
+    http://www.acme.com/software/http_load/
 
 * 命令格式::
 
@@ -40,7 +41,7 @@ http_load命令使用方法
     msecs/first-response: 63.5362 mean, 81.624 max, 57.803 min
     HTTP response codes: code 200 — 49 
 
-* 結果说明:
+* 結果说明::
 
     1. 49 fetches, 2 max parallel, 289884 bytes, in 10.0148 seconds
         说明在上面的测试中运行了49个请求，最大的并发进程数是2，总计传输的数据是289884bytes，运行的时间是10.0148 秒
@@ -57,5 +58,29 @@ http_load命令使用方法
 * 特殊说明:
 
     测试结果中主要的指标是 fetches/sec、msecs/connect 这个选项，即服务器每秒能够响应的查询次数！
+
+常见错误
+------------
+byte count wrong::
+
+    http_load在处理时会去关注每次访问同一个URL返回结果（即字节数）是否一致，若不一致就会抛出byte count wrong所以动态页面可以忽略这个错误信息。或者可以对代码做修改http_load.c
+
+too many open files::
+
+    系统限制的open files太小，ulimit -n 修改open files值即可；
+
+无法发送大请求 （请求长度>600个字符）::
+
+    默认接受请求的buf大小 http_load.c
+
+Cannot assign requested address::
+
+    客户端频繁的连服务器，由于每次连接都在很短的时间内结束，导致很多的TIME_WAIT，以至于用光了可用的端口号，所以新的连接没办法绑定端口，所以要改客户端机器的配置，
+
+    在sysctl.conf里加：
+    net.ipv4.tcp_tw_reuse = 1 表示开启重用。允许将TIME-WAIT sockets重新用于新的TCP连接，默认为0，表示关闭；
+    net.ipv4.tcp_timestamps=1 开启对于TCP时间戳的支持,若该项设置为0，则下面一项设置不起作用
+    net.ipv4.tcp_tw_recycle=1 表示开启TCP连接中TIME-WAIT sockets的快速回收    
+
 
 
