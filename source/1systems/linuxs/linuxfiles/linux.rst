@@ -36,61 +36,62 @@ linux下特殊文件说明
         %注: root用户的话可以用命令ulimit -n 65535
 
 
-修改网络内核对TCP连接的有关限制
----------------------------------------
+* 修改网络内核对TCP连接的有关限制::
 
-* ``/etc/sysctl.conf``
-
+    ``/etc/sysctl.conf``
 
 
+* 察看操作是哪个操作系统::
+    
+    /etc/issue
 
-    * 察看操作是哪个操作系统::
+* 设置指定的域名解析地址::
 
-        /etc/issue
+    /etc/hosts
 
-    * 设置指定的域名解析地址::
+* ``.ssh/config`` 文件内容格式::
 
-        /etc/hosts
+    host eqitonghub
+    user git
+    hostname 60.216.116.245
+    port 22
+    identityfile ~/.ssh/gordon.git
 
-    * ``.ssh/config`` 文件内容格式::
+* 设置DNS::
 
-        host eqitonghub
-        user git
-        hostname 60.216.116.245
-        port 22
-        identityfile ~/.ssh/gordon.git
+    /etc/resolv.conf
 
-    * 设置DNS::
+* 日志消息目录::
 
-        /etc/resolv.conf
+    /var/spool/mail/
 
-    * 日志消息目录::
+* 字符目录::
 
-        /var/spool/mail/
+    Locale是根据计算机用户所使用的语言，所在国家或者地区，以及当地的文化传统所定义的一个软件运行时的语言环境
+    /usr/share/i18n/locales/
+    /usr/share/i18n/charmaps/    字符集
 
-    * 字符目录::
+* path路径::
 
-        Locale是根据计算机用户所使用的语言，所在国家或者地区，以及当地的文化传统所定义的一个软件运行时的语言环境
-        /usr/share/i18n/locales/
-        /usr/share/i18n/charmaps/    字符集
+    /etc/profile
+    %or
+    ~/.bash_profile
+    %添加如下命令(也可直接在shell里输入)
+    PATH=/sbin:$PATH
 
-    * path路径::
+* ssh服务相关文件::
 
-        /etc/profile
-        %or
-        ~/.bash_profile
-        %添加如下命令(也可直接在shell里输入)
-        PATH=/sbin:$PATH
+    /etc/ssh/sshd_config
 
-    * ssh服务相关文件::
+    AuthorizedKeysFile      %h/.ssh/authorized_keys
+    PasswordAuthentication   no: 指定不允许密码登录
+    PermitRootLogin          no: 不允许root用户登陆
+    Port                     22: 指定登录端口,默认TCP 22端口
+    AllowUsers happy test kaixin   指定允许登录用户
 
-        /etc/ssh/sshd_config
+    ChallengeResponseAuthentication yes: @todo 未知是做啥的(估计是用于expect脚本登录)
 
-        #ChallengeResponseAuthentication yes——设定是否允许使用密码登录,如果使用密钥认证,可以把它禁止。
-        #PermitRootLogin                 yes——是否允许root登录,建议禁止root登录,要用root只能用普通帐户登录后用su命令
-        #Port                            22——指定登录端口,默认TCP 22端口,可以修改成其他端口,客户端登录时用-p选项指定端口
-
-    * sudo权限相关文件 ``/etc/sudoers``
+* sudo权限相关文件 ``/etc/sudoers``
 
     .. literalinclude:: ./files/sudoers
        :language: nginx

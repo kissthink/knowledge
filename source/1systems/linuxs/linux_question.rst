@@ -47,6 +47,11 @@ linux问题汇总
     AuthorizedKeysFile     .ssh/authorized_keys         //設定ssh登陆
     PasswordAuthentication no              //禁止密码登陆
 
+    //可以让你在远程机器上执行gui程序然后在"本地"显示图形
+    AllowTcpForwarding yes
+    X11Forwarding yes
+
+
 重启sshd::
 
     service sshd restart

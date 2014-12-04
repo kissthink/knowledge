@@ -14,8 +14,9 @@ update-rd.d命令
 
 * 实例::
 
-    update-rc.d -f nginx defaults #新增服务
-    update-rc.d -f nginx remove
+    // nginx已经在/etc/init.d下面了
+    update-rc.d -f nginx defaults # 新增服务
+    update-rc.d -f nginx remove   # 删除服务
 
 
 

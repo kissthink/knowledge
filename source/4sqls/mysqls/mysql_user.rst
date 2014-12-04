@@ -64,9 +64,12 @@
     -- 用户abc的所有主机名用:abc@'%'
     grant all on dataBaseName.* to userName@localhost identified by ‘passwd‘;
 
-赋予复制权限::
-
+    //赋予复制权限
     grant replication slave on *.* to 'replication'@'%';
+
+    // 可以将自己拥有的权限授权给别人
+    grant all privileges on *.* to jack@'localhost' identified by "jack" with grant option;
+
 
 权限列表::
 

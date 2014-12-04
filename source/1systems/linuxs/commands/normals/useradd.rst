@@ -35,3 +35,8 @@ useradd命令
 
         useradd -m -s /bin/bash gordon
         useradd -G test -d /tmp/usr1 usr1
+
+        adduser --disabled-login --gecos 'GitLab' git    // 禁止登录
+
+
+

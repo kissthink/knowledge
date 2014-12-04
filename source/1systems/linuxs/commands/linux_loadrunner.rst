@@ -1,4 +1,4 @@
-性能测试命令
+性能检测命令
 ================
 
 :作者: 新溪-gordon <programfan.info#gmail.com>
@@ -12,6 +12,8 @@
 
    loadrunners/top
    loadrunners/ps
+
+   loadrunners/lsof
 
    loadrunners/vmstat
    loadrunners/iostat

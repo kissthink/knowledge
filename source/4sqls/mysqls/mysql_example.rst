@@ -13,7 +13,7 @@ MySQL实例
 * 查詢現在的max connections設定::
 
     select VARIABLE_VALUE from information_schema.GLOBAL_VARIABLES 
-    where VARIABLE_NAME=’MAX_CONNECTIONS’;
+    where VARIABLE_NAME='MAX_CONNECTION';
 
 * 查詢現在已經使用的connections數目::
 

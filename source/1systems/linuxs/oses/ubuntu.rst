@@ -16,8 +16,6 @@ ubuntu专用命令
 
 
 
-
-
 * dpkg命令的使用::
 
     sudo dpkg -i wiznote_1.0-1_i386.deb

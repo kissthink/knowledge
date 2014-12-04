@@ -64,6 +64,8 @@ netstat  网络连接状态
     netstat -nlp        //查看系统当前监听的端口
     netstat -nap  // -p, --programs
 
+    netstat -antup
+
 
 查看ddos情况::
 
