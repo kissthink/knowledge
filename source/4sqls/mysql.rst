@@ -13,6 +13,8 @@ Contents:
 
    mysqls/mysql_command
    mysqls/mysql_user
+   mysqls/mysql_question
+
    mysqls/mysql_check
    mysqls/mysql_config
    mysqls/mysql_tool
@@ -36,7 +38,6 @@ Contents:
    mysqls/mysql_faq
    mysqls/mysql_architecture
    mysqls/mysql_auto_increment
-   mysqls/mysql_question
 
    mysqls/mysql_type
    mysqls/mysql_install

@@ -4,14 +4,14 @@
 =======================
 
 shell操作mysql命令
-^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------
 ::
 
     mysql -umysql -psa
     mysqladmin -u root -p shutdown
 
 数据库级操作
-^^^^^^^^^^^^^^^^^^^
+---------------
 ::
 
     create database <database>;       //新建一个名为mydb的数据库
@@ -25,7 +25,7 @@ shell操作mysql命令
     show columns from [table name]; //查看数据表各字段信息
 
 表级操作
-^^^^^^^^^^^^^^^^
+------------
 ::
 
     //查看本DB的所有表
@@ -57,7 +57,7 @@ shell操作mysql命令
 
 
 修改表字段
-^^^^^^^^^^^^^^^^^^^^
+----------------
 ::
 
     //修改字段名
@@ -75,7 +75,7 @@ shell操作mysql命令
 
 
 select命令
-^^^^^^^^^^^^^^^^^
+-------------
 ::
 
         SELECT * FROM [tabName];//
@@ -143,13 +143,13 @@ select命令
 
         
 update命令
-^^^^^^^^^^^^^^^^
+------------
 ::
 
     update [tabName] set [field name]=[field value] where [field2 name]=[field2 value]
 
 insert命令
-^^^^^^^^^^^^^^^
+-----------
 ::
 
     insert into <DB>.<Table> values (<value1>, <value2>, ...);
@@ -164,7 +164,7 @@ insert命令
     INSERT INTO <DB>.<TABLE> SELECT 1, REPEAT('a', 7);
 
 delete命令
-^^^^^^^^^^^^^^^^^^^
+---------------
 ::
 
     DELETE FROM <tbl_name> [WHERE where_definition]
@@ -204,24 +204,25 @@ delete命令
 
 事件调度器
 -------------
-设定事件调度器::
+* 基本操作::
 
-    show global variables like "event_scheduler";
-    SET GLOBAL event_scheduler = 1
-
-    // 执行
-    SET GLOBAL event_scheduler = 1;
-    SET GLOBAL event_scheduler = ON;
-
-查看当前是否已开启事件调度器::
-
+    // 查看是否已开启事件调度器
     SHOW VARIABLES LIKE 'event_scheduler';
     或
     SELECT @@event_scheduler;
     或
     SHOW PROCESSLIST;
 
-创建语法::
+    // 设定事件调度器
+    SET GLOBAL event_scheduler = 1;
+    SET GLOBAL event_scheduler = ON;
+
+    // 查看
+    SHOW EVENTS;
+    // 查看具体事件
+    SHOW CREATE EVENT <eventName>;
+
+* 创建语法::
 
     CREATE EVENT [IF NOT EXISTS] event_name
     ON SCHEDULE <schedule>
@@ -252,7 +253,7 @@ delete命令
     ON SCHEDULE AT CURRENT_TIMESTAMP + INTERVAL 5 DAY
     DO TRUNCATE TABLE test.aaa;
 
-修改事件(ALTER EVENT)::
+* 修改事件(ALTER EVENT)::
 
     ALTER EVENT event_name
     [ON SCHEDULE schedule]
@@ -270,9 +271,15 @@ delete命令
     ALTER EVENT e_test
     ON SCHEDULE EVERY 5 DAY;
 
-删除事件(DROP EVENT)::
+* 删除事件(DROP EVENT)::
 
     DROP EVENT [IF EXISTS] event_name
+
+存储过程相关
+-----------------
+::
+
+    //
 
 锁相关
 -------------

@@ -295,3 +295,6 @@ ERROR 1040 (HY000): Too many connections
     mysql>use mysql;
     mysql> delete  from user where HOST='localhost.localdomain';
     Query OK, 2 rows affected (0.00 sec)
+
+
+
