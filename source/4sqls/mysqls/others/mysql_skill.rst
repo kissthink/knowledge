@@ -1,7 +1,19 @@
-.. _mysql_auto_increment:
+.. _mysql_skill:
 
-MySQL自增字段
-#####################
+MySQL小技巧
+###########################
+
+* 当你使用多行输入时，如果打错想放弃输入使用命令 ``\c``::
+
+    mysql> SELECT
+       -> USER()
+       -> \c
+    mysql>
+
+* 巧用linux管道，让mysql执行大量脚本文件::
+
+    cat /sqldir/*.sql | mysql -u username -p 
+
 
 获取MySQL自增ID的4种方法
 ================================
@@ -21,5 +33,8 @@ MySQL自增字段
 * 结果对应表名记录中有个Auto_increment字段::
 
     SHOW TABLE STATUS;
+
+
+
 
 

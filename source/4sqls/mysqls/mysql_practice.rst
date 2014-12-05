@@ -8,5 +8,7 @@ MySQL实际操作
 
    practices/mysql_practice_replication
    practices/mysql_practice_checkout
+   practices/mysql_example
+   practices/mysql_summary
 
 
