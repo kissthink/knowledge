@@ -47,19 +47,31 @@ locale命令
     * 对locale自身包含信息的概述(LC_IDENTIFICATION)。 
 
 
-**方法** ::
+方法 ::
 
     locale [options] [name...]
 
-**说明** :
+说明 :
     得到指定的locale-specific信息
 
-**选项** :
+选项 :
 
     使用命令 ``locale --help`` 察看
 
-**范例** ::
+范例 ::
 
     locale -ck LC_TIME  //针对日期与时间的設定,打印目录名称与所有关键字
     locale day mon      //显示用于周、月的字符串
 
+    // 当遇到问题时可执行下面步骤
+    export LANGUAGE=en_US.UTF-8
+    export LANG=en_US.UTF-8
+    export LC_ALL=en_US.UTF-8
+    locale-gen en_US.UTF-8
+    dpkg-reconfigure locales   // 设定默认locale
+
+
+    
+
+
+    

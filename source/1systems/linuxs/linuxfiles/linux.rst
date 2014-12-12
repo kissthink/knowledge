@@ -2,6 +2,29 @@
 
 linux下特殊文件说明
 ########################
+/etc/network/interfaces文件格式::
+
+    # The loopback network interface
+    auto lo
+    iface lo inet loopback
+
+    # The primary network interface
+    allow-hotplug eth0
+    allow-hotplug eth1
+    auto eth0
+    auto eth1
+    iface eth0 inet static
+      address 192.168.0.10
+      netmask 255.255.255.0
+      gateway 192.168.0.1
+      metric 2
+
+    iface eth1 inet static
+      address 122.112.12.10
+      netmask 255.255.255.224
+      gateway 122.112.12.1
+      metric 1
+
 
 /etc/init.d/下文件书写格式
 -------------------------------------

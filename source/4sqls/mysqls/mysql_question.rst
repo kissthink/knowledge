@@ -6,3 +6,4 @@ MySQL问题汇总
 
    questions/mysql_simple
    questions/mysql_advance
+   questions/mysql_optimize

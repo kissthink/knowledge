@@ -24,7 +24,6 @@ Contents:
    mysqls/06mysql_security
    mysqls/07mysql_backup
    mysqls/16mysql_replication
-   mysqls/17mysql_cluster
 
    mysqls/mysql_other
 
