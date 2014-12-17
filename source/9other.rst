@@ -12,8 +12,6 @@
 .. toctree::
    :maxdepth: 1
 
-   9others/question
-   9others/itterm
    9others/technology
    9others/regexp
    9others/http

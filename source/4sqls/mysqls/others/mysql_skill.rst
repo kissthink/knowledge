@@ -16,7 +16,7 @@ MySQL小技巧
 
 
 获取MySQL自增ID的4种方法
-================================
+------------------------------
 
 * ::
 
@@ -34,6 +34,13 @@ MySQL小技巧
 
     SHOW TABLE STATUS;
 
+
+其他
+---------
+    
+配置文件加载顺序::
+
+    /etc/my.cnf /etc/mysql/my.cnf /usr/local/mysql/etc/my.cnf ~/.my.cnf 
 
 
 

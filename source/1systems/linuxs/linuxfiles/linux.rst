@@ -2,6 +2,24 @@
 
 linux下特殊文件说明
 ########################
+
+查看进程最可靠地方::
+
+    /proc/<PID>/<file>
+    如:
+    // 查看进程的内存数据
+    /proc/<PID>/statm
+    611450 185001 883 18 0 593431 0
+
+    1. size :- total program size (611450 X 4096/1024 = 2445800kB = 2388M)
+    2. resident :- resident set size (185001 X 4096/1024 = 740004kB = 722M)
+    3. share :- shared pages (883 X 4096 = 3532)
+    4. trs :- text (code) (18 X 4096/1024 = 72kB = VmExe )
+    5. drs :- data/stack
+    6. lrs :- library (593431 X 4096/1024 = 2373724kB = VmData +VmStk)
+    7. dt :- dirty pages
+
+
 /etc/network/interfaces文件格式::
 
     # The loopback network interface

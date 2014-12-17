@@ -8,4 +8,5 @@
 
    englishs/english_word
    englishs/english_setence
+   englishs/english_abbr
 

@@ -234,9 +234,9 @@ ERROR 1040 (HY000): Too many connections
 
 * 检查连接MySQL客户端数::
 
-    linux>> netstat -anp  | grep mysql | wc -l
+    linux >> netstat -anp  | grep mysql | wc -l
     or
-    mysql>> show processlist; 
+    mysql >> show processlist;
 
 * 解决方案::
 
@@ -262,7 +262,11 @@ ERROR 1040 (HY000): Too many connections
 命令操作时中文乱码解决办法
 ----------------------------------
 
-* 使用命令::
+查看操作::
+
+  show variables like '%char%';
+
+使用命令::
 
     set names utf8[gbk]
     or
@@ -270,7 +274,7 @@ ERROR 1040 (HY000): Too many connections
     set character_set_results=utf8;
     set character_set_connection=utf8;
 
-* 配置文件修改::
+配置文件修改::
 
     default-character-set=utf8
 
@@ -279,22 +283,43 @@ ERROR 1040 (HY000): Too many connections
 启用skip-name-resolve模式时出现Warning的处理办法
 ----------------------------------------------------------
 
-* 在优化MYSQL配置时, 加入 ``skip-name-resolve``, 有警告信息::
+在优化MYSQL配置时, 加入 ``skip-name-resolve``, 有警告信息::
 
     120726 11:57:22 [Warning] 'user' entry 'root@localhost.localdomain'
     ignored in --skip-name-resolve mode.  www.2cto.com
 
-* 原因:
+原因:
 
     * ``skip-name-resolve`` 是禁用dns解析，避免网络DNS解析服务引发访问MYSQL的错误，一般应当启用
     * 启用后，在mysql的授权表中就不能使用主机名了，只能使用IP ，出现此警告是由于mysql 表中已经存在有 localhost.localdomain 帐号信息
 
 
-* 解决::
+解决::
 
     mysql>use mysql;
     mysql> delete  from user where HOST='localhost.localdomain';
     Query OK, 2 rows affected (0.00 sec)
 
+InnoDB: Error: page 213054 log sequence number <xxx>is in the future! 
+-------------------------------------------------------------------------
+详情::
+   
+   InnoDB: Error: page 213054 log sequence number <xxx>is in the future!
+   InnoDB: Current system log sequence number<xxx>
+   InnoDB: Your database may be corrupt or you may have copied the InnoDB
+   InnoDB: tablespace but not the InnoDB log files. See
+   InnoDB: http://dev.mysql.com/doc/refman/5.5/en/forcing-innodb-recovery.html
+   InnoDB: for more information.
+
+原因::
+
+   1. 删除ib_logfile文件
+   2.
+
+解决方案(待验证)::
+
+  将参数修改为innodb_force_recovery = 4
+  http://dev.mysql.com/doc/refman/5.5/en/forcing-innodb-recovery.html
+  
 
 

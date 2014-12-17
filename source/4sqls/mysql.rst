@@ -9,7 +9,7 @@ MySQL使用文档
 Contents:
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
 
    mysqls/mysql_command
    mysqls/mysql_user

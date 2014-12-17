@@ -11,7 +11,6 @@
    07backups/backup_example
    07backups/backup_mysqldump
    07backups/backup_incremental
-   07backups/backup_myisam
 
 
 
