@@ -13,4 +13,5 @@ Contents:
 
    emacs/emacs
    emacs/vim
+   emacs/phpstorm
 

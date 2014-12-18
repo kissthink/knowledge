@@ -27,5 +27,8 @@ emacs使用
     M+x menu-bar-open
     M+~
 
+MySQL相关::
 
+  M-x sql-help    // 查帮助
+  M-x sql-mysql      // 可以直接登录mysql
 

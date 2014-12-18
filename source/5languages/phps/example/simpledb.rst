@@ -1,53 +1,44 @@
 .. _simpledb:
 
 简单的数据库实例
-=================
+===================
 
-
-* db_login.php::
-
-    <?php
-    $db_host='localhost';
-    db_database = 'wordpress';
-    db_username = 'root';
-    db_password='sa';
-    ?>
-
-* db_select.php::
-
-    <?php
-    $select = ' SELECT ';
-    $column = '* ';
-    $from = ' FROM ';
-    $tables = ' wp_users ';
-    $query = $select.$column.$from.$tables;
-    ?>
-
-* db_test.php::
+from: http://wiki.hashphp.org/PDO_Tutorial_for_MySQL_Developers
+* db_test.php(PDO)::
 
     <?php
     include('db_login.php');
-    include('db_select.php');
-    $connection = mysql_connect( $db_host, $db_username, $db_password );
-    if(!$connection) {
-        die ("Could not connect to the database: <br />".mysql_error());
+
+    $db = new PDO('mysql:host=localhost;dbname=testdb;charset=utf8', 'username', 'password');
+    
+    // 请求得到全部数据
+    try {
+      $stmt = $db->query("SELECT * FROM table");
+      return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    } catch(PDOException $ex) {
+      //handle me.
     }
 
-    $db_select = mysql_select_db($db_database);
-    if(!$db_select) {
-        die ("Could not select the database: <br />".mysql_error());
+    // 一条条进行操作
+    foreach($db->query('SELECT * FROM table') as $row) {
+       echo $row['field1'].' '.$row['field2']; //etc...
     }
 
-    $result = mysql_query( $query );
-    if(!$result) {
-        die ("Could not query the databases: <br />".mysql_error());
-    }
+    // 得到请求条数
+    $stmt = $db->query('SELECT * FROM table');
+    $row_count = $stmt->rowCount();
 
-    while ($result_row = mysql_fetch_row(($result))) {
-        echo 'ID: '.$result_row([1].' <br />';
-        echo 'user_login '.$result_row[2].' <br />';
-        echo 'user_email '.$result_row[5].' <br />';
-    }
-    mysql_close($connection);
-    ?>
+    // Getting the Last Insert Id
+    $result = $db->exec("INSERT INTO table(firstname, lastname) VAULES('John', 'Doe')");
+    $insertId = $db->lastInsertId();
 
+    // Running Simple INSERT, UPDATE, or DELETE statements
+    $affected_rows = $db->exec("UPDATE table SET field='value'");
+    echo $affected_rows.' were affected'
+
+    // Running Statements With Parameters
+    $stmt = $db->prepare("SELECT * FROM table WHERE id=? AND name=?");
+    $stmt->execute(array($id, $name));
+    $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    
+    ... 
