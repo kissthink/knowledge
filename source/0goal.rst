@@ -14,4 +14,5 @@ Contents:
    0goals/goal_overview
    0goals/goal_extract
    0goals/goal_git
+   0goals/goal_todo
 

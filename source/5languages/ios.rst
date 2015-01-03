@@ -10,6 +10,7 @@ Contents:
 .. toctree::
    :maxdepth: 2
 
+   ioses/ios_skill
    ioses/ios_install
    ioses/ios_framework
    ioses/ios_tmp

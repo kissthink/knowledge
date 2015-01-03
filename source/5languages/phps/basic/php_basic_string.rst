@@ -27,5 +27,16 @@ php基本的字符串使用
     echo strncmp("Hello world!","Hello earth!",6);
     // 0, 二进制安全的，且对大小写敏感
 
+::
+
+   // 字串分离
+   explode("fff,ffff", ",")
+   // 字串长度
+   strlen("fff,ffff")
+
+
+
+
+
 
 

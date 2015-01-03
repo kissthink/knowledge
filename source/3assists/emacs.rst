@@ -14,4 +14,5 @@ Contents:
    emacs/emacs
    emacs/vim
    emacs/phpstorm
+   emacs/sublime
 

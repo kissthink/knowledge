@@ -23,7 +23,8 @@ range分区创建实例::
 
 删除分区::
 
-  alter table <tab> drop partition <p4>    --删除分区，则分区的数据也删除
+  ALTER TABLE <tab> REMOVE PARTITION;    -- 删除分区
+  alter table <tab> drop partition <p4>    --删除<p4>分区，则分区的数据也删除
      
 
 List分区创建::

@@ -13,7 +13,6 @@ Contents:
    phps/php_basic
    phps/php_collect
    phps/php_question
-   phps/php_example
    phps/php_codeignitor
    phps/php_yaf
    phps/php_smarty

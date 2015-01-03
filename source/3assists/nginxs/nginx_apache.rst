@@ -108,3 +108,27 @@ apache的简单使用方法
         </Directory>
    </VirtualHost>
 
+
+
+
+请求文件找不到转移到index.php::
+
+   // 指定目录增加文件.htaccess
+   <IfModule mod_rewrite.c>
+       Options -MultiViews
+       RewriteEngine On
+
+   RewriteCond %{REQUEST_FILENAME} !-d
+       RewriteCond %{REQUEST_FILENAME} !-f
+       RewriteRule ^ index.php [L]
+   </IfModule>
+
+   // 对应nginx
+   if (!-e $request_filename) {
+      rewrite ^/(.*) /index.php/$1 last;
+   }
+
+
+
+   
+   

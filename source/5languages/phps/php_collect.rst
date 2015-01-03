@@ -5,6 +5,7 @@ php配置、安装等收集数据(乱七八糟)
 
 .. toctree::
 
+   collects/php_basic_webserver
    collects/php_install
    collects/php_gd
    collects/php_captcha

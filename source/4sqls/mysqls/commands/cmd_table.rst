@@ -29,3 +29,5 @@
         <field> <type> comment "<comment>"
     ) ENGINE=InnoDB DEFAULT CHARSET=utf8 ;
 
+    // 创建一个新表<table1>具有<table2>结构
+    CREATE TABLE <table1> LIKE <table2>;

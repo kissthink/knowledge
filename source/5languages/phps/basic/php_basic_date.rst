@@ -16,5 +16,17 @@ php其他基本功能说明
     ini_set('date.timezone','Asia/Shanghai');
     ini_set('date.timezone','Asia/Chongqing');
 
+date常见用法::
+
+  date_default_timezone_set('UTC');
+  // 每天的第一秒
+  $t1 = mktime(0, 0, 0, date("n"),date("j"),date("Y"));
+  $date1 = date("Y-m-d H:i:s", $t1);
+  // 每天的最后一秒
+  $t2 = mktime(23, 59, 59, date("n"),date("j"),date("Y"));
+  $date2 = date("Y-m-d H:i:s", $t2);
 
 
+
+
+  

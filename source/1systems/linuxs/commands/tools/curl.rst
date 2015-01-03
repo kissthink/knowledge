@@ -114,7 +114,15 @@ curl命令实例
 * 指定用户端::
 
     curl -A "Mozilla/4.0 (compatible; MSIE 5.01; Windows NT 5.0)" URL
-
+    // ipad safari
+    curl -A "Mozilla/5.0 (iPad; CPU OS 7_1_1 like Mac OS X) AppleWebKit/537.51.2 (KHTML, like Gecko) Version/7.0 Mobile/11D201 Safari/9537.53" <URL>
+    // iphone 5c weixin
+    "Mozilla/5.0 (iPhone; CPU iPhone OS 8_1_2 like Mac OS X) AppleWebKit/600.1.4 (KHTML, like Gecko) Mobile/12B440 MicroMessenger/6.0.2 NetType/WIFI"
+    // 华为 微信
+    "Mozilla/5.0 (Linux; U; Android 4.2.2; zh-cn; HUAWEI G716-L070 Build/HuaweiG716-L070) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 Mobile Safari/534.30 MicroMessenger/6.0.0.54_r849063.501 NetType/WIFI"
+    // 华为 内置浏览器
+    "Mozilla/5.0 (Linux; U; Android 4.2.2; zh-cn; HuaweiG716-L070_LTE Build/HuaweiG716-L070_LTE) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 Mobile Safari/534.30"
+    
 * COOKIES::
 
     curl -b cookies.txt -c newcookies.txt www.cookiesite.com
