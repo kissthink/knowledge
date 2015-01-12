@@ -19,7 +19,7 @@ phpstorm使用
   总检查我单词拼写错误，报绿线
   phpstorm->Settings | Inspections | Spelling
 
-
-  
+// 这儿介绍不错
+http://www.cnblogs.com/jikey/p/3491798.html  
    
 

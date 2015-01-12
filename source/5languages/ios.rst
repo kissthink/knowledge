@@ -11,6 +11,8 @@ Contents:
    :maxdepth: 2
 
    ioses/ios_skill
+   ioses/ios_code
+   ioses/ios_class   
    ioses/ios_install
    ioses/ios_framework
    ioses/ios_tmp
