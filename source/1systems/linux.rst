@@ -18,7 +18,7 @@ Linux文档
    linuxs/special
    linuxs/linux_question
    linuxs/linux_skill
-   linuxs/linux_tool
+   linuxs/linux_install   
 
 
 

@@ -15,9 +15,11 @@ sublime使用
    }
            
 
+把进行代码格式化(好像不是很好用的说)::
 
+  >> Preferences → Key Bindings – User
+  {"keys": ["super+shift+r"], "command": "reindent" , "args": {"single_line": false}}
 
-  
 
 
 

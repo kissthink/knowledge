@@ -1,0 +1,48 @@
+debian的安装
+#####################
+
+修改hostname::
+
+  hostname <hostname>         // 修改hostname
+  修改文件 /etc/hostname
+
+修改 ``/etc/bash.bashrc`` 文件::
+
+  alias la='ls -A'
+  alias ll='ls -alhF'
+  alias ls='ls -G'
+
+  alias grep='grep --color=auto'
+  
+  export LANGUAGE=en_US.UTF-8
+  export LANG=en_US.UTF-8
+  export LC_ALL=en_US.UTF-8
+
+
+安装必要工具::
+
+  apt-get install tmux emacs vim git-core
+  
+  apt-get install emacs23-el
+       php-elisp  # emacs support for php file
+
+  # php脚本相关
+  apt-get install php5
+      php5-mysqlnd   // Native Driver
+      php5-mcrypt   // 加密相关(laraval需要)
+
+  # php-fpm相关
+  apt-get install php5-fpm nginx
+
+增加普通用户::
+
+  useradd -m -s /bin/bash <用户名>
+  passwd <用户名>
+
+修改ssh相关::
+
+  // 修改文件
+  /etc/sshd_config
+  1. 修改port
+  2. 禁止root登录(PermitRootLogin)
+
