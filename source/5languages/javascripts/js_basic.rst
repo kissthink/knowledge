@@ -18,5 +18,17 @@ base64相关::
     $.base64Decode(msg);   //解密
 
 
+大小写相关::
 
+  //转换成大写
+  toUpperCase 方法
+  strVariable.toUpperCase( )
+  "String Literal".toUpperCase( )
+  
+  //转换成大写
+  toLowerCase 方法
+  strVariable.toLowerCase( )
+  "String Literal".toLowerCase( )
+  
+  
 

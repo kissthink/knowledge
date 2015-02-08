@@ -16,7 +16,8 @@ php基本介绍
    basic/php_basic_reserved_variable
    basic/php_basic_exception
    basic/php_basic_function
+   basic/php_basic_ini
    basic/php_basic_normal
-
+   basic/php_basic_other
 
 

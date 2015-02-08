@@ -22,12 +22,17 @@ debian的安装
 安装必要工具::
 
   apt-get install tmux emacs vim git-core
+
+  apt-get install curl
+
+  apt-get install redis-server
   
   apt-get install emacs23-el
        php-elisp  # emacs support for php file
 
   # php脚本相关
   apt-get install php5
+      php5-curl      // jpush会用到(或自己使用php的curl)
       php5-mysqlnd   // Native Driver
       php5-mcrypt   // 加密相关(laraval需要)
 
