@@ -8,7 +8,7 @@ ios使用技巧
   Window -> Devices    // 打开设备管理
 
 
-新加测试机操作::
+有帐号新加测试机操作::
 
   1. 打开develop网站,在device中增加一条记录(udid可以通过“设备管理器”查到)
   2. <cmd> + , 打开配置，点击“Accounts”
@@ -17,9 +17,14 @@ ios使用技巧
   5. 完成后<shift> + <cmd> + k进行缓存清理
   6. done
 
+修改应用显示名操作::
 
+  “Build Setting”中搜索product然后找到“Product Name”
 
+修改bundle id::
 
+  有时遇到bundleid不能修改的
+  “Info”中找“Bundle identifier”,在这儿进行修改就好了
 
 
 

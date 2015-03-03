@@ -29,6 +29,39 @@ base64相关::
   toLowerCase 方法
   strVariable.toLowerCase( )
   "String Literal".toLowerCase( )
+
+替换相关::
+
+  <stringObject>.replace(regexp/substr,replacement)
+
+encode & decode::
+
+
+    function htmlencode(s){
+       var div = document.createElement('div');
+       div.appendChild(document.createTextNode(s));
+       return div.innerHTML;
+    }
+    function htmldecode(s){
+       var div = document.createElement('div');
+       div.innerHTML = s;
+       return div.innerText || div.textContent;
+    }
+
+    实例测试
+    document.onclick = function (){
+       //&lt;p&gt; &amp; &lt;/p&gt;
+       alert(htmlencode('<p> & </p>'));
+
+       //<p> & © ABC 中文 中文 </p>
+       alert(htmldecode('&lt;p&gt; &amp; &copy; &#65;&#66;&#67; &#20013;&#25991; &#x4E2D;&#x6587; &lt;/p&gt;'));
+    }
   
-  
+
+jquery 如何使用innerHTML::
+
+  $("#responsediv") 是个Jquery对象，它Val()是对Value属性赋值对它无意义,Jquery没有innerHTML这个属性
+  应该这样写$("#responsediv")[0].innerHTML=msg 就可以获得这个Dom对象使用innerHTML
+  or
+  document.getElementById("#tabs").innerHTML;
 

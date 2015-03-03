@@ -33,9 +33,25 @@ php基本的字符串使用
    explode("fff,ffff", ",")
    // 字串长度
    strlen("fff,ffff")
-
-
-
+   // 字串包含
+   //demo1
+   if(strstr($a,"exe"))   // 返回一个从被判断字符开始到结束的字符串,如果没有返回null值(stristr不区分大小写)
+   {
+       echo "exe\n";
+   }
+   // demo2
+   $c=explode($b,$a);
+   if(count($c)>1){
+      echo "true";
+   }
+   // demo3
+   if(strpos("$abc","a")==-1)  // strpos: 返回boolean值
+   {
+       echo "没有a";
+   }
+   
+   // 字串大写
+   string strtoupper ( string $string )
 
 
 
