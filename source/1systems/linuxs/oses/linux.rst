@@ -49,6 +49,7 @@ linux命令
 获取cpu个数(unchecked)
 ::
 
+   
     nu1=`cat /proc/cpuinfo |grep processor|sed '$!d'|awk '{print $3}'`
     let "nu=($nu1+1)"
     cupname=`cat /proc/cpuinfo |grep "model name"|sed '$!d'|awk '{print $4 " " $5 " " $7}'`

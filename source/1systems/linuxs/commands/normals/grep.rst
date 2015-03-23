@@ -9,6 +9,11 @@ grep <字符串>|”<正则表达式>” [文件名]
 
     grep -R <keyword> <path>
 
+* 使用正则需要加-E::
+
+    grep -E <正则> <文件>
+
+
 * 取出不含<string>的列表::
 
     <list> | grep -v <string>

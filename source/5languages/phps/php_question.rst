@@ -2,6 +2,16 @@
 
 php问题汇总
 ##########################
+connect() to ``unix:/var/run/php-fpm/php.sock failed (11: Resource temporarily unavailable)`` while connecting to upstream
+------------------------------------------------------------------------------------------------------------------------------
+::
+
+   sock方式好像对php支持不好
+   建议使用tcp方式
+   The issue is socket itself, its problems on high-load cases is well-known.
+   Please consider using TCP\IP connection instead of unix socket, for that you need to make these changes:
+   replace listen = /var/run/php5-fpm.sock with listen = 127.0.0.1:9000
+   ipc(sock)在highload下php的处理并不好
 
 
 Fatal error: Allowed memory size of 134217728 bytes exhausted
