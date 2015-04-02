@@ -65,3 +65,31 @@ jquery 如何使用innerHTML::
   or
   document.getElementById("#tabs").innerHTML;
 
+
+onclick事件::
+
+  onclick="javascript:jump('{{$ad['url']}}')"
+  // 记得函数加单引号
+
+  
+url参数值::
+
+  // 使用正则表示
+  function getQueryString(name) {
+      var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+      var r = window.location.search.substr(1).match(reg);
+      if (r != null) return unescape(r[2]); return null;
+  }
+
+ie剪切版::
+
+
+      if($.browser.msie){
+          window.clipboardData.setData("Text",$(this).text());
+      }
+
+
+
+
+
+      
