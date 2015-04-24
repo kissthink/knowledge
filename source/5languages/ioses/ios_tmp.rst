@@ -47,8 +47,26 @@ ios收集
 
     Grand Central Dispatch或者GCD，是一套低层API，提供了一种新的方法来进行并发程序编写。
 
+* 应用跳转到AppStore指定关键字搜索界面::
 
+    //应用跳转到AppStore指定关键字(呵呵)搜索界面
+    NSString *str = [NSString stringWithFormat:
+        @"https://itunes.apple.com/WebObjects/MZStore.woa/wa/search?mt=8&submit=edit&term=%@#software",
+        [@"呵呵" stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding] ];
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:str]];
+    // 跳转到下载界面
+    NSString *str = [NSString stringWithFormat:
+        @"itms-apps://itunes.apple.com/WebObjects/MZStore.woa/wa/viewSoftware?id=%d",
+        909480609 ];
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:str]];
 
+    //根据分类搜索界面
+    // NSString *stringURL = @"https://itunes.apple.com/cn/genre/ios-zhi-bo/id6007?mt=8";
+    //https://itunes.apple.com/cn/artist/xiamen-meitu-technology-co./id416048308
+    // https://itunes.apple.com/cn/artist/xiamen-meitu-technology-co./id416048308#
+    NSString *stringURL = @"https://itunes.apple.com/cn/genre/ios-jiao-yu/id6017?mt=8";
 
+    NSURL *url = [NSURL URLWithString:stringURL];
+    [[UIApplication sharedApplication] openURL:url];
 
 
