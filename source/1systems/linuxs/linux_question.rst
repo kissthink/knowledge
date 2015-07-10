@@ -289,6 +289,7 @@ ssh问题
 * Agent admitted failure to sign using the key.
 * Permission denied (publickey,gssapi-with-mic).
 * Permission denied (publickey,keyboard-interactive).
+* Permission denied (publickey,password).    // 3次密码输入错误
 * ssh_exchange_identification: read: Connection reset by peer(1.运营商2.尝试次数太多ip被防火墙干掉了)
 
 

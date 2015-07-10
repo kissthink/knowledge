@@ -27,6 +27,15 @@ ios使用技巧
   “Info”中找“Bundle identifier”,在这儿进行修改就好了
 
 
+导入第三方sdk时，有时会出现::
+
+  Undefined symbols for architecture i386:和"_OBJC_CLASS_$_xx", referenced from:
+  原因可查看evernote中的内容
+
+  一般解决方案:
+  删除报错的sdk，重新下载导入
+
+
 
 
 

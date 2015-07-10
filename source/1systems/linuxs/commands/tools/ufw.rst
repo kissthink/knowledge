@@ -3,50 +3,38 @@
 ufw——ubuntu防火墙命令
 ==========================
 
-* **ufw 使用范例**
+* ufw 使用范例::
 
-    * 允许 53 端口::
-
-        $ sudo ufw allow 53
-
-    * 禁用 53 端口::
-
-        $ sudo ufw delete allow 53
-
-    * 允许 80 端口::
-
-        $ sudo ufw allow 80/tcp
-
-    * 允许 smtp 端口::
-
-        $ sudo ufw allow smtp
-
-    * 允许某特定 IP::
-
-        $ sudo ufw allow from 192.168.254.254
-
-    * 删除上面的规则::
-
-        $ sudo ufw delete allow from 192.168.254.254
+    //允许 53 端口
+    ufw allow 53
+    //禁用 53 端口
+    ufw delete allow 53
+    //允许 80 端口
+    ufw allow 80/tcp
+    //允许 smtp 端口
+    ufw allow smtp
 
 
-* **ufw ubuntu防火墙简单设置**
+    //允许某特定 IP
+    ufw allow from 192.168.254.254
+    //删除上面的规则
+    ufw delete allow from 192.168.254.254
+    // 允许指定ip段访问 
+    ufw allow from 10.0.0.0/8
 
-    * 安装::
+    开启/禁用
+    ufw allow|deny [service]
 
-        sudo apt-get install ufw
 
-    * 启用::
+* ufw ubuntu防火墙简单设置::
 
-        sudo ufw enable
-        sudo ufw default deny
+    sudo apt-get install ufw
 
+    //启用
+    sudo ufw enable
+    sudo ufw default deny
     运行以上两条命令后，开启了防火墙，并在系统启动时自动开启。 
     关闭所有外部对本机的访问，但本机访问外部正常。
-
-    * 开启/禁用::
-
-        sudo ufw allow|deny [service]
 
       打开或关闭某个端口，例如::
 

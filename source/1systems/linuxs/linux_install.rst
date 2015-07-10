@@ -33,11 +33,16 @@ debian的安装
   # php脚本相关
   apt-get install php5
       php5-curl      // jpush会用到(或自己使用php的curl)
-      php5-mysqlnd   // Native Driver
+      php5-mysqlnd   // Native Driver(如不安装，默认php的int按float类型)
       php5-mcrypt   // 加密相关(laraval需要)
 
   # php-fpm相关
   apt-get install php5-fpm nginx
+
+  # mysql相关
+  apt-get install mysql-server mysql-common mysql-client
+
+
 
 增加普通用户::
 
