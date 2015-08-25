@@ -18,6 +18,7 @@ Contents:
    commands/cmd_delete
    commands/cmd_index
    commands/cmd_event
+   commands/cmd_declare
    commands/cmd_procedure
    commands/cmd_partition
    commands/cmd_lock

@@ -15,6 +15,6 @@ Contents:
    androids/android_tpl
    androids/android_other
    androids/android_question
-
+   androids/android_language
 
 
