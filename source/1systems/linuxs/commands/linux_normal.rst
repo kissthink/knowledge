@@ -14,6 +14,7 @@
 
 
    normals/crontab
+   normals/logrotate
    normals/nohup
 
    normals/date

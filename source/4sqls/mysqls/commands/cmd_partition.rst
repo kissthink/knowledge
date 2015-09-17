@@ -38,6 +38,21 @@ range分区创建实例::
      PARTITION p11 VALUES LESS THAN MAXVALUE
   );
 
+增加分区::
+
+  // 1. 没有设定MAXVALUE的情况
+  alter table wishwells add PARTITION(
+      PARTITION p1607 values less than (to_days('2016-08-01'))
+  );
+  // 2. 设定MAXVALUE的情况
+  alter table wishwells REORGANIZE PARTITION pmax into(
+      PARTITION p1607 values less than (to_days('2016-08-01')),
+      PARTITION p1608 values less than (to_days('2016-09-01')),
+      PARTITION pmax VALUES LESS THAN MAXVALUE
+  );
+
+  
+
 非分区表转换为分区表实例(224.6w条数据)::
 
   1. 为原来的主键对应字段增加索引：INDEX  （6s）——为删除主键做准备（自增字段）

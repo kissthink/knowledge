@@ -128,3 +128,28 @@ innodb_force_recovery
   Does not do the redo log roll-forward in connection with recovery. This value can permanently corrupt data files. Leaves database pages in an obsolete state, which in turn may introduce more corruption into B-trees and other database structures.
 
 
+innodb_file_per_table
+''''''''''''''''''''''''
+innodb独立表空间::
+
+  如果由“共享表空间”转化而来，需要做如下操作
+
+  方法1：
+  1. 备份全部数据库，执行命令::
+  mysqldump -q -uusername -pyourpassword --add-drop-table -all-databases > /all.sq
+  2. 修改my.ini文件，增加下面配置::
+  innodb_file_per_table = 1
+  3. 暂停数据库
+  4. 删除原来的ibdata1文件及日志文件ib_logfile*，删除data目录下的应用数据库文件夹(mysql文件夹不要删)
+  5. 启动数据库
+  6. 还原数据库::
+  mysql -uusername -pyourpassword < /all.sql
+
+  方法2：
+  修改配置文件my.cnf中的参数innodb_file_per_table参数为1
+     重启服务后将需要修改的所有innodb表都执行一遍：
+     alter table table_name engine=innodb;
+  注：方式修改后，原来库中的表中的数据会继续存放于ibdata1中，新建的表才会使用独立表空间
+
+
+
