@@ -30,10 +30,15 @@ Git命令2
 * 删除分支::
 
     git branch -d <branchName>   //删除本地分支
-    git branch -D <branchName>   //删除远程分支
-    git branch -d -r origin/<branchName>    //删除远程分支(待定)
-    or
+    git branch -D <branchName>   //删除未提交的分支
+
+    git branch -d -r origin/<branchName>    //删除远程分支
     git push origin :<branchName>
+
+    //删除远程分支后，其他本地版本同步
+    git fetch -p
+    // p, --prune
+    //    After fetching, remove any remote-tracking branches which no longer exist on the remote.
 
 * 合并分支(把<branchName>分支合并到当前分支)::
 
