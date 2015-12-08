@@ -12,9 +12,9 @@ laravel4.2版
 
 * 安装::
 
-  composer create-project laravel/laravel your-project-name --prefer-dist
-  or
-  wget https://github.com/laravel/laravel/archive/master.zip
+    composer create-project laravel/laravel your-project-name --prefer-dist
+    or
+    wget https://github.com/laravel/laravel/archive/master.zip
 
 * Serving Laravel::
 

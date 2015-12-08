@@ -99,7 +99,9 @@ NSTimer相关::
 
 
 
-* 本地存储数据简单的说有三种方式：数据库、NSUserDefaults和文件::
+* 本地存储数据简单的说有三种方式::
+
+    数据库、NSUserDefaults和文件
 
   
 
