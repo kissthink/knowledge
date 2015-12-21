@@ -138,4 +138,28 @@ linux下特殊文件说明
        :language: nginx
        :linenos:
 
+时区设置::
 
+   /etc/timezone
+   /etc/localtime
+
+   配置时区的命令是：
+   $sudo dpkg-reconfigure tzdata
+   
+   第一个文件写的是系统的时区, 我的是: Asia/Shanghai
+   第二个文件还可以这样改:
+   ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
+
+   是否用UTC时间可以改这个文件: /etc/default/rcS
+   UTC=no 或者 UTC=yes
+
+   重启crond
+   /etc/init.d/crond restart
+   重启日志服务
+   /etc/init.d/rsyslog restart
+   
+
+其他::
+
+   所有命令历史记录
+   .bash_history
