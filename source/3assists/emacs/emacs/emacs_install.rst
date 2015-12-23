@@ -3,19 +3,6 @@
 emacs安装
 #################
 
-源码安装
------------------
-* centos::
-
-    sudo yum install libXpm libXpm-devel libtiff libtiff-devel giflib giflib-devel 
-
-* 去网站 http://www.gnu.org/s/emacs 得到下载包
-* 标准安装::
-
-    ./configure --prefix=/usr/local/emacs-<version>
-    make
-    sudo make install
-
 
 yum安装
 ----------------

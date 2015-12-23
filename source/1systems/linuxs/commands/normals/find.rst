@@ -55,4 +55,6 @@ find命令使用
     find . -name "[a-z]*"    //找出以a-z开头的文件
 
 
+    //可以通过下述指令查找硬链接
+    find / -xdev -samefile /etc/resolv.conf
 

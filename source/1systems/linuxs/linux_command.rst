@@ -15,6 +15,7 @@
    commands/linux_tool
    commands/linux_benchmark
    commands/linux_normal
+   commands/linux_system
    commands/linux_compress
    commands/linux_network
    commands/linux_kernel

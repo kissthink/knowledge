@@ -11,3 +11,4 @@ JAVA文档
 
    javas/java_install
    javas/java_config
+   javas/java_tmp

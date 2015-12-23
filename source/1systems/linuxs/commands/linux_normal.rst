@@ -29,17 +29,12 @@
    normals/sort
    normals/uniq
    normals/split
+   normals/tr
+   
 
 
    normals/telnet
    normals/tree
-
-   normals/useradd
-   normals/usermod
-
-   normals/chmod
-   normals/chown
-   normals/chgrp
 
    normals/simple
 

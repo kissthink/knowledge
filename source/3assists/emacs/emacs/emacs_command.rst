@@ -22,13 +22,10 @@ emacs命令列表
    commands/emacs_command_region
    commands/emacs_command_window
    commands/emacs_command_other
-   commands/emacs_command_register
    commands/emacs_command_bookmark
-   commands/emacs_command_macro
    commands/emacs_command_outline
    commands/emacs_command_file
    commands/emacs_command_search
-   commands/emacs_command_sdcv
 
 
 
