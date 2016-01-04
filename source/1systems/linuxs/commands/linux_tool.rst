@@ -33,6 +33,7 @@
    tools/iptables
 
    tools/mount
+   tools/umount
    tools/kill
 
    tools/samba

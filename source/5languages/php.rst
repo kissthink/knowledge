@@ -15,6 +15,7 @@ Contents:
    phps/php_question
    phps/php_codeignitor
    phps/php_yaf
+   phps/php_fpm
    phps/php_smarty
    phps/php_phpmyadmin
    phps/php_discuz
