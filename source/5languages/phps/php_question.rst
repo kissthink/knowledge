@@ -56,4 +56,8 @@ Fatal error: Allowed memory size of 134217728 bytes exhausted
         kill -9  $PID
     done
 
+* 设定pm.max_requests后，超过指定请求数后::
 
+   [07-Feb-2015 10:06:48] NOTICE: [pool www] child 19591 exited with code 0 after 52040.698062 seconds from start
+   [07-Feb-2015 10:06:49] NOTICE: [pool www] child 17234 started
+  

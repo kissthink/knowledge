@@ -20,6 +20,7 @@
    commands/linux_network
    commands/linux_kernel
    commands/linux_special
+   commands/linux_advance
    commands/linux_centos
    commands/linux_debian
    commands/linux_freebsd

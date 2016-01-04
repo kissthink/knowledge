@@ -45,7 +45,16 @@ root用户不能给新用户赋值权限
     给user表的grant_priv值赋为Y,然后flush privilege;
 
 
+debian机器在直接拷贝MySQL数据文件后启动问题
+-----------------------------------------------
+::
 
+   error: 'Access denied for user 'debian-sys-maint'@'localhost' (using password: YES)
+   操作:
+   使用/etc/init.d/mysql restart时不起作用
+   原因:
+   使用apt-get安装MySQL时会自动生成debian-sys-maint用户，此用户用于debian中mysql的重启工作
+   重启服务会使用/etc/mysql/debian.cnf里的配置
 
 
 

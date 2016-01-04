@@ -8,6 +8,22 @@ MySQL在远程访问时非常慢的解决skip-name-resolve 并且出现Reading f
    [mysqld]
    skip-name-resolve
 
+unauthenticated user 解决办法
+---------------------------------
+::
+
+   mysql>show processlist;
+   | 20681949 | unauthenticated user | A.B.C.D:52497 | NULL | Connect | | Reading from net | NULL |
+   | 20681948 | unauthenticated user | W.X.Y.Z:52495 | NULL | Connect | | Reading from net | NULL |
+   // 由一个客户端发起的连接，但是这个客户端用户还没有被认证
+   // 这种情况一般在系统负载比较高或者mysql比较繁忙的时候遇到
+   How to repeat:
+   This issue happens when the database size is more than 1GB and are connected to the busy web application powered by PHP engine.
+
+   http://dev.mysql.com/doc/refman/5.1/en/show-processlist.html
+
+
+   
 MySQL导出的SQL语句在导入时有可能会非常慢问题
 -------------------------------------------------
 
