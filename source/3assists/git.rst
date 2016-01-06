@@ -14,6 +14,7 @@ Contents:
    gits/git_command.rst
    gits/git_command2.rst
    gits/git_commands.rst
+   gits/git_code
    gits/git_other
    gits/svn
    gits/hg

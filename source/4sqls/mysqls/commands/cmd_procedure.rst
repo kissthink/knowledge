@@ -1,23 +1,25 @@
 procedure存储过程相关
 ------------------------------
-::
-
-    //一.创建存储过程
+一.创建存储过程::
+  
     create procedure sp_name()
     begin
     .........
     end
 
-    //二.调用存储过程
+二.调用存储过程::
+  
     call sp_name()
     注意：存储过程名称后面必须加括号，哪怕该存储过程没有参数传递
 
-    三.删除存储过程
+三.删除存储过程::
+  
     drop procedure sp_name//
 
     不能在一个存储过程中删除另一个存储过程，只能调用另一个存储过程
 
-    四.其他常用命令
+四.其他常用命令::
+  
     1.show procedure status
     2.show create procedure sp_name
 
