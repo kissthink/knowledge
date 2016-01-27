@@ -12,6 +12,7 @@ Contents:
 
    androids/android_requirement
    androids/android_install
+   androids/android_build
    androids/android_tpl
    androids/android_other
    androids/android_question

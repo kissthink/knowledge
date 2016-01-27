@@ -1,17 +1,15 @@
 安装步骤
 ########
 
+下载SDK Starter包::
 
-**准备工作**
-    按前一章， 完成准备工作，其中eclipse解压后就可以用了.
-
-**下载SDK Starter包**
     * SDK starter包不是一个完整的开发环境(它只包含核心的SDK工具，你可以用它来下载最新的SDK部件[如最新的android平台])。
     * 下载地址: `SDK Starter包下载地址 <https://developer.android.com/sdk/index.html>`_
     * 解压包文件 ``android-sdk-<machine-platform>``
     * **记住SDK在你系统中的名字和目录** (在安装ADT插件或在命令行下用SDK工具)
 
-**为Eclipse安装ADT(Android Development Tools)插件**
+为Eclipse安装ADT(Android Development Tools)插件::
+
     1. 下载ADT插件:
         * 启动eclipse选择 ``Help > Install New Software...``
         * 点击 **Add**
@@ -35,7 +33,8 @@
         * 在主面板 *SDK Location* ，点击 **Browse...** ，选择你之前安装的SDK目录
         * 点击 **Apply** , 然后点击 **OK**
 
-**增加平台或其他组件**
+增加平台或其他组件::
+
     用 *Android SDK and AVD Manager* (SDK starter包的一个工具)安装SDK的最后一步是: 下载必须的SDK组件到你的开发环境中。
     SDK模块化结构，每个目录存放对应的内容:
 
@@ -53,12 +52,13 @@
 
             ./tools/android
 
-   执行如上命令后，会打开 **Android SDK and AVD Manager** 管理页面，见下图:
+执行如上命令后，会打开 **Android SDK and AVD Manager** 管理页面，见下图:
 
        .. figure:: image/Android_SDK_and_AVD_Manager.png
            :width: 100%
 
-**可用组件(Available Components)**
+可用组件(Available Components)::
+
     默认SDK有两个资源库: *Android资源库(Android Repository)* 和 *第三方插件(Third party Add-ons)*
 
     1. *Android资源库(Android Repository)* 提供以下几种内容的组件:

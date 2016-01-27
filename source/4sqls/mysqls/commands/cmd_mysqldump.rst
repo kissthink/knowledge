@@ -20,7 +20,6 @@
 * mysqldump默认不会dump ``INFORMATTION——SCHEM`` 数据库！你必须在命令行使用  ``--skip-lock-tables`` 选项明确指定(在MySQL5.5之前即使你明确指定也会忽略这个DB)！
 * mysqldump不会dump数据库performance_schema
 * mysqldump也不会dump MySQL Cluster **ndbinfo** 信息数据库
-* 运行 ``mysqldump --help`` 寻求帮助
 * 一些选项是其他一组选项的集合:
 
     * --opt(默认带有些选项)::
@@ -42,7 +41,7 @@
         --skip-disable-keys
         --skip-set-charset
 
-* 使用格式 ``--skip-xxx`` 来反转选项作用，如 ``--skip-opt`` 和 ``--skip-comact`` 选项！
+* 使用格式 ``--skip-xxx`` 来反转选项作用，如 ``--skip-opt`` 和 ``--skip-comact`` 选项
 * 实例说明::
 
     --opt --skip-extended-insert --skip-quick
@@ -52,14 +51,6 @@
 
     * 一行行的萃取并dump表内容(使用 ``--quick`` 命令)
     * 从一个表中萃取整个内容并且在dump数据前先把数据缓存到内存中(这种方法在大表时可能会出问题，使用 ``--skip-quick`` 选项)
-
-
-.. csv-table::
-   :widths: 10, 90
-   :header: 选项, 说明
-
-       --help, 显示帮助信息并退出
-       --tab, 生成以制表符分隔的文本格式数据
 
 
 * 其他选项列表参看:

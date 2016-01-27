@@ -26,6 +26,6 @@ Contents:
    mysqls/16mysql_replication
 
    mysqls/mysql_other
-
+   mysqls/mysql_architecture
    mysqls/mysql-proxy
 

@@ -15,7 +15,6 @@
 
    compresses/rar
    compresses/tar
-   compresses/unzip
    compresses/gzip
    compresses/gunzip
    compresses/bunzip2

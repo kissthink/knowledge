@@ -16,18 +16,24 @@ ps命令使用
        l 显示长列表
        -o <format>   //--format <format>
 
+ps工具标识进程的5种状态码::
+
+    D 不可中断 uninterruptible sleep (usually IO)
+    R 运行 runnable (on run queue)
+    S 中断 sleeping
+    T 停止 traced or stopped
+    Z 僵死 a defunct (”zombie”) process
+
 
 示例::
 
-     ps alx               另一种常用输出格式
+     ps aux     常用的输出格式
+     ps alx     另一种常用输出格式
 
-
-To see every process on the system using standard syntax::
-
-    ps -e
-    ps -ef
-    ps -eF
-    ps -ely
+     // 查看所有进程
+     ps -ef    // 显示所有进程信息，连同命令行
+     ps -eF
+     ps -ely
 
 To see every process on the system using BSD syntax::
 

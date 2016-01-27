@@ -1,17 +1,46 @@
 其他MySQL相关
 =================
 
-:作者: 新溪-gordon <programfan.info(#)gmail.com>
-:时间: 2014-12-05
+* 当你使用多行输入时，如果打错想放弃输入使用命令 ``\c``::
 
-Contents:
+    mysql> SELECT
+       -> USER()
+       -> \c
+    mysql>
 
-.. toctree::
-   :maxdepth: 2
+* 巧用linux管道，让mysql执行大量脚本文件::
 
-   others/mysql_skill
-   others/mysql_architecture
+    cat /sqldir/*.sql | mysql -u username -p 
 
-   others/mysql_type
-   others/mysql_mysqldump
-   others/mysql_optimization
+
+获取MySQL自增ID的4种方法
+------------------------------
+
+* ::
+
+    select max(id) from tablename;
+
+* LAST_INSERT_ID 是与table无关的::
+
+    SELECT LAST_INSERT_ID();
+
+* @@identity 是表示的是最近一次向具有identity属性, 是系统定义的全局变量(一般系统定义的全局变量都是以@@开头，用户自定义变量以@开头)::
+
+    select @@IDENTITY;
+
+* 结果对应表名记录中有个Auto_increment字段::
+
+    SHOW TABLE STATUS;
+
+
+其他
+---------
+    
+配置文件加载顺序::
+
+    /etc/my.cnf /etc/mysql/my.cnf /usr/local/mysql/etc/my.cnf ~/.my.cnf 
+
+
+
+
+
